@@ -1,0 +1,162 @@
+.property-details-page {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.back-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  display: inline-flex;
+  transition: opacity var(--transition-fast);
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.details-header {
+  margin-bottom: 2rem;
+}
+
+.details-title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.details-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  height: 500px;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.details-content {
+  align-items: flex-start;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.features-bar {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 3rem;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.feature-item span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.text-primary { color: var(--color-primary); }
+.text-accent { color: var(--color-accent); }
+.w-100 { width: 100%; }
+
+.description-section, .amenities-section {
+  margin-bottom: 3rem;
+}
+
+.description-section h2, .amenities-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.description-section p {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.amenity-item {
+  font-size: 1.1rem;
+}
+
+.contact-card, .map-card {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.contact-card h3, .map-card h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.contact-card p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .details-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .image-gallery {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .thumbnail-grid {
+    display: none;
+  }
+  .main-image {
+    height: 300px;
+  }
+  .details-content {
+    flex-direction: column;
+  }
+  .sidebar-content {
+    position: static;
+    width: 100%;
+  }
+}
