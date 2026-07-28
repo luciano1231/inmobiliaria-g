@@ -12,7 +12,7 @@ function App() {
   const whatsappNumber = "5491112345678";
 
   return (
-    <Router>
+    <Router basename="/inmobiliaria-g/">
       <div className="app-container">
         <Navbar />
         <main>
