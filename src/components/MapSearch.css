@@ -1,37 +1,54 @@
-/* ===== DESKTOP: Side-by-side layout ===== */
+/* ===================================================
+   MapSearch Layout — Booking.com style
+   Desktop: Left col (map + filters) | Right col (cards)
+   Mobile: Map → Filters → Cards (vertical flow)
+   =================================================== */
+
 .map-search-layout {
   display: flex;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   margin-top: 80px;
   background-color: var(--color-background);
 }
 
-.search-sidebar {
-  width: 45%;
-  max-width: 600px;
-  min-width: 400px;
-  height: 100%;
-  overflow-y: auto;
-  padding: 1.5rem;
+/* --- LEFT COLUMN (Desktop: fixed sidebar) --- */
+.left-column {
+  width: 320px;
+  min-width: 280px;
+  max-width: 350px;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   border-right: 1px solid var(--color-border);
+  background: var(--color-surface);
   z-index: 10;
 }
 
 .map-area {
-  flex: 1;
-  height: 100%;
+  width: 100%;
+  height: 280px;
+  min-height: 280px;
   position: relative;
   z-index: 1;
 }
 
-/* ===== Filters ===== */
 .filters-container {
   padding: 1.25rem;
-  border-radius: var(--radius-lg);
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.filters-title {
+  margin-bottom: 0.25rem;
+}
+
+.filters-title h3 {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .filter-pills {
@@ -43,7 +60,7 @@
   border-radius: var(--radius-full);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text-muted);
   transition: all var(--transition-fast);
@@ -60,7 +77,23 @@
   border-color: var(--color-secondary);
 }
 
-/* ===== Properties Grid ===== */
+.results-count {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* --- RIGHT COLUMN (Scrollable cards) --- */
+.right-column {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
 .properties-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -75,7 +108,21 @@
   grid-column: 1 / -1;
 }
 
-/* ===== Map Popup Styles ===== */
+/* --- Fade-in animation for cards --- */
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Map Popup Styles --- */
 .custom-popup .leaflet-popup-content-wrapper {
   padding: 0;
   overflow: hidden;
@@ -98,7 +145,7 @@
 
 .custom-popup .popup-content h4 {
   margin: 0 0 0.25rem 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .custom-popup .popup-content .price {
@@ -107,61 +154,61 @@
   color: var(--color-primary);
 }
 
-/* ===== MOBILE: Vertical scrollable page ===== */
+/* ===================================================
+   MOBILE LAYOUT — Vertical flow
+   =================================================== */
 @media (max-width: 900px) {
   .map-search-layout {
-    flex-direction: column; /* Mapa arriba, propiedades abajo */
-    height: auto;           /* Que la pagina fluya, sin panel fijo */
-    margin-top: 60px;       /* Navbar mas chica en mobile */
-    min-height: calc(100vh - 60px);
-    overflow: visible;      /* Permitir scroll normal del body */
+    flex-direction: column;
+    height: auto;
+    margin-top: 60px;
+    min-height: auto;
   }
 
-  .search-sidebar {
+  .left-column {
     width: 100%;
     max-width: none;
     min-width: 0;
-    height: auto;           /* Sin altura fija */
-    overflow-y: visible;    /* Sin scroll interno, se usa el scroll del body */
-    order: 2;               /* Aparece despues del mapa */
+    height: auto;
+    position: relative; /* No sticky en mobile */
+    top: auto;
     border-right: none;
-    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .map-area {
-    width: 100%;
-    height: 280px;          /* Mapa compacto */
-    min-height: 280px;
-    order: 1;               /* Aparece primero */
-    touch-action: pan-x pan-y; /* Permitir scroll tactil sobre el mapa */
+    height: 250px;
+    min-height: 250px;
+    touch-action: pan-x pan-y;
   }
 
-  /* Evitar que Leaflet capture todo el touch y bloquee scroll */
   .map-area .leaflet-container {
     touch-action: pan-x pan-y;
   }
 
+  .right-column {
+    padding: 1rem;
+    overflow-y: visible;
+  }
+
   .properties-grid {
-    grid-template-columns: 1fr; /* Una columna en movil */
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   .filters-container {
-    margin-bottom: 0.5rem;
     padding: 1rem;
   }
 }
 
-/* ===== Pantallas muy chicas (< 480px) ===== */
 @media (max-width: 480px) {
   .map-area {
-    height: 220px;
-    min-height: 220px;
+    height: 200px;
+    min-height: 200px;
   }
 
-  .search-sidebar {
+  .right-column {
     padding: 0.75rem;
-    gap: 1rem;
   }
 
   .filter-pill {
