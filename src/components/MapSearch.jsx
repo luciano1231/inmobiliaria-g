@@ -24,6 +24,8 @@ export function MapSearch() {
   const [properties, setProperties] = useState(mockProperties);
   const [activeFilter, setActiveFilter] = useState('Todos');
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
+
   const filterProperties = (type) => {
     setActiveFilter(type);
     if (type === 'Todos') {
@@ -35,7 +37,37 @@ export function MapSearch() {
 
   return (
     <div className="map-search-layout">
-      {/* Sidebar with Grid */}
+      {/* Map Area - arriba en mobile */}
+      <div className="map-area">
+        <MapContainer 
+          center={[-27.4692, -58.8306]} 
+          zoom={13} 
+          style={{ height: '100%', width: '100%' }}
+          scrollWheelZoom={!isMobile}
+          dragging={!isMobile}
+          touchZoom={false}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          />
+          {properties.map(property => (
+            <Marker key={property.id} position={property.coordinates}>
+              <Popup className="custom-popup">
+                <Link to={`/property/${property.id}`} className="popup-content flex gap-4">
+                  <img src={property.images[0]} alt={property.title} />
+                  <div>
+                    <h4>{property.title}</h4>
+                    <p className="price">{property.currency} {property.price.toLocaleString()}</p>
+                  </div>
+                </Link>
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
+
+      {/* Sidebar with filters + Grid - abajo en mobile */}
       <div className="search-sidebar">
         <div className="filters-container glass">
           <div className="flex items-center gap-2 mb-4">
@@ -66,33 +98,6 @@ export function MapSearch() {
             ))
           )}
         </div>
-      </div>
-
-      {/* Map Area */}
-      <div className="map-area">
-        <MapContainer 
-          center={[-27.4692, -58.8306]} 
-          zoom={13} 
-          style={{ height: '100%', width: '100%' }}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-          />
-          {properties.map(property => (
-            <Marker key={property.id} position={property.coordinates}>
-              <Popup className="custom-popup">
-                <Link to={`/property/${property.id}`} className="popup-content flex gap-4">
-                  <img src={property.images[0]} alt={property.title} />
-                  <div>
-                    <h4>{property.title}</h4>
-                    <p className="price">{property.currency} {property.price.toLocaleString()}</p>
-                  </div>
-                </Link>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+/* ===== DESKTOP: Side-by-side layout ===== */
 .map-search-layout {
   display: flex;
   height: calc(100vh - 80px);
@@ -26,6 +27,7 @@
   z-index: 1;
 }
 
+/* ===== Filters ===== */
 .filters-container {
   padding: 1.25rem;
   border-radius: var(--radius-lg);
@@ -58,6 +60,7 @@
   border-color: var(--color-secondary);
 }
 
+/* ===== Properties Grid ===== */
 .properties-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -72,7 +75,7 @@
   grid-column: 1 / -1;
 }
 
-/* Custom Popup Styles */
+/* ===== Map Popup Styles ===== */
 .custom-popup .leaflet-popup-content-wrapper {
   padding: 0;
   overflow: hidden;
@@ -104,18 +107,65 @@
   color: var(--color-primary);
 }
 
+/* ===== MOBILE: Vertical scrollable page ===== */
 @media (max-width: 900px) {
   .map-search-layout {
-    flex-direction: column-reverse;
-    height: auto;
+    flex-direction: column; /* Mapa arriba, propiedades abajo */
+    height: auto;           /* Que la pagina fluya, sin panel fijo */
+    margin-top: 60px;       /* Navbar mas chica en mobile */
+    min-height: calc(100vh - 60px);
+    overflow: visible;      /* Permitir scroll normal del body */
   }
+
   .search-sidebar {
     width: 100%;
     max-width: none;
-    height: auto;
-    overflow-y: visible;
+    min-width: 0;
+    height: auto;           /* Sin altura fija */
+    overflow-y: visible;    /* Sin scroll interno, se usa el scroll del body */
+    order: 2;               /* Aparece despues del mapa */
+    border-right: none;
+    padding: 1rem;
   }
+
   .map-area {
-    height: 350px;
+    width: 100%;
+    height: 280px;          /* Mapa compacto */
+    min-height: 280px;
+    order: 1;               /* Aparece primero */
+    touch-action: pan-x pan-y; /* Permitir scroll tactil sobre el mapa */
+  }
+
+  /* Evitar que Leaflet capture todo el touch y bloquee scroll */
+  .map-area .leaflet-container {
+    touch-action: pan-x pan-y;
+  }
+
+  .properties-grid {
+    grid-template-columns: 1fr; /* Una columna en movil */
+    gap: 1rem;
+  }
+
+  .filters-container {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+/* ===== Pantallas muy chicas (< 480px) ===== */
+@media (max-width: 480px) {
+  .map-area {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .search-sidebar {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .filter-pill {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
   }
 }
