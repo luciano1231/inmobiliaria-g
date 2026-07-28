@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
+import { Home, Mail, Phone, MapPin, Globe, MessageCircle } from 'lucide-react';
 import './Footer.css';
 
 export function Footer() {
@@ -24,11 +24,11 @@ export function Footer() {
               Tu próxima historia comienza con nosotros. Propiedades premium en Corrientes Capital.
             </p>
             <div className="footer-socials flex gap-4">
-              <a href="#" aria-label="Instagram" className="social-icon">
-                <Instagram size={20} />
+              <a href="#" aria-label="Redes Sociales" className="social-icon">
+                <Globe size={20} />
               </a>
-              <a href="#" aria-label="Facebook" className="social-icon">
-                <Facebook size={20} />
+              <a href="#" aria-label="Contacto" className="social-icon">
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
