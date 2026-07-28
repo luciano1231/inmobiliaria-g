@@ -107,13 +107,15 @@
 @media (max-width: 900px) {
   .map-search-layout {
     flex-direction: column-reverse;
+    height: auto;
   }
   .search-sidebar {
     width: 100%;
     max-width: none;
-    height: 50vh;
+    height: auto;
+    overflow-y: visible;
   }
   .map-area {
-    height: 50vh;
+    height: 350px;
   }
 }

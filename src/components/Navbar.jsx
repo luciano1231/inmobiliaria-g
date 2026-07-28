@@ -5,7 +5,7 @@ import './Navbar.css';
 
 export function Navbar() {
   return (
-    <nav className="navbar glass">
+    <nav className="navbar">
       <div className="container flex justify-between items-center navbar-content">
         <Link to="/" className="navbar-logo flex items-center gap-2">
           <Home className="logo-icon" size={28} />
