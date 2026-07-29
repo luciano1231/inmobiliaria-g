@@ -19,9 +19,6 @@ export function Navbar() {
 
         <div className="navbar-links flex items-center gap-6">
           <Link to="/" className="nav-link">Inicio</Link>
-          <Link to="/admin" className="nav-link flex items-center gap-2">
-            <Settings size={18} /> Admin
-          </Link>
         </div>
       </div>
     </nav>

@@ -12,8 +12,9 @@ export const mockProperties = [
     area: 180,
     description: "Amplia casa con piscina, cochera para dos autos y patio. A pocas cuadras de la plaza 25 de Mayo.",
     images: [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/beautiful-shot-white-building-hamilton-gardens-new-zealand-blue-sky.jpg",
+      "/images/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     amenities: ["Piscina", "Cochera", "Patio", "Aire acondicionado"],
     whatsapp: "5491112345678"
@@ -31,9 +32,9 @@ export const mockProperties = [
     area: 65,
     description: "Departamento luminoso con balcón, cocina separada y vista al río. Cerca de la costanera.",
     images: [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/arquitectura-moderna-apartamentos_1268-14696.avif",
+      "/images/disenos.departamentos.software.1.jpg",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     amenities: ["Balcón", "Ascensor", "Seguridad 24h", "Vista al río"],
     whatsapp: "5491112345678"
@@ -51,8 +52,8 @@ export const mockProperties = [
     area: 450,
     description: "Terreno plano con frente de 12 m, servicios de luz y agua. Ideal para construir casa familiar.",
     images: [
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/house-isolated-field.jpg",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     amenities: ["Agua", "Luz", "Pavimento"],
     whatsapp: "5491112345678"
@@ -70,9 +71,9 @@ export const mockProperties = [
     area: 220,
     description: "Casona de estilo colonial restaurada, con parque, galería y pileta. Excelentes terminaciones.",
     images: [
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/front-door-house.jpg",
+      "/images/vacation-mykonos-travel-tourism-village.jpg",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     amenities: ["Pileta", "Jardín", "Galeria", "Cochera", "Chimenea"],
     whatsapp: "5491112345678"
@@ -148,10 +149,51 @@ export const mockProperties = [
     area: 35,
     description: "Monoambiente completamente amueblado, ideal para profesional. Edificio con seguridad y ascensor.",
     images: [
-      "https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/images/102974-el-ipv-sorteara-466-departamentos-en-capital-y-se-podra-ver-en-vivo.webp",
+      "/images/Edificio-en-Libertad-171-Tucuman-11-730x1024.jpg",
+      "https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     ],
     amenities: ["Amueblado", "Ascensor", "Seguridad", "Lavadero"],
+    whatsapp: "5491112345678"
+  },
+  {
+    id: 9,
+    title: "Gran Casa Colonial en Esquina",
+    type: "Casa",
+    price: 320000,
+    currency: "USD",
+    location: "Centro, Corrientes",
+    coordinates: [-27.4628, -58.8300],
+    bedrooms: 5,
+    bathrooms: 4,
+    area: 350,
+    description: "Inmueble único con detalles arquitectónicos coloniales, ideal para hotel boutique o residencia exclusiva.",
+    images: [
+      "/images/moroccan-traditional-background-mosaic-marrakech.jpg",
+      "/images/DSC_0453-Editar-Editar.webp",
+      "/images/images.jpg"
+    ],
+    amenities: ["Patio", "Balcón", "Piscina", "Cochera"],
+    whatsapp: "5491112345678"
+  },
+  {
+    id: 10,
+    title: "Proyecto en Pozo - Departamentos Premium",
+    type: "Departamento",
+    price: 45000,
+    currency: "USD",
+    location: "Costanera, Corrientes",
+    coordinates: [-27.4640, -58.8355],
+    bedrooms: 2,
+    bathrooms: 1,
+    area: 55,
+    description: "Excelente oportunidad de inversión. Departamentos de 2 y 3 ambientes con vistas al río Paraná.",
+    images: [
+      "/images/small-figurine-blueprint.jpg",
+      "/images/house-key-calculator-with-dollar-bills.jpg",
+      "/images/post-image-6c7e19a2-b479-46a7-ae67-74cc78d87422-0-1778780777807.jpg"
+    ],
+    amenities: ["Gimnasio", "Seguridad 24h", "SUM", "Vista al río"],
     whatsapp: "5491112345678"
   }
 ];
