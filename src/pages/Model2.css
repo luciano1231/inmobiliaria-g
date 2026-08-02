@@ -1,0 +1,147 @@
+/* Model 2 Premium Styles */
+.model2-page {
+  background-color: #0d0f12; /* Dark background */
+  color: #e5e7eb;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section-m2 {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg-m2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/arquitectura-moderna-apartamentos_1268-14696.avif'); /* Sleek dark image */
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  animation: zoomBg 20s infinite alternate linear;
+}
+
+@keyframes zoomBg {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.hero-overlay-m2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(13, 15, 18, 0.4), rgba(13, 15, 18, 0.9));
+}
+
+.hero-content-m2 {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.hero-badge-m2 {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.2);
+  color: #d4af37; /* Gold accent */
+  border: 1px solid #d4af37;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title-m2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle-m2 {
+  font-size: 1.25rem;
+  color: #a0aec0;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.btn-m2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #d4af37; /* Gold */
+  color: #000;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-m2:hover {
+  background: #f3c740;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Map Section */
+.map-container-m2 {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title-m2 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.section-title-m2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  margin: 1rem auto 0;
+}
+
+/* Fade In Animations */
+.fade-in-m2 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-m2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Override MapSearch components slightly to fit dark theme */
+.map-container-m2 .leaflet-container {
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  filter: contrast(1.1) brightness(0.9);
+}
