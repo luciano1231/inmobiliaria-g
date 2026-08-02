@@ -38,6 +38,20 @@ export function LandingPage() {
             <p>Estética oscura y elegante. Ideal para propiedades exclusivas y de alto valor.</p>
           </div>
         </div>
+
+        {/* Card Modelo 3 */}
+        <div className="model-card">
+          <div className="model-image">
+            <img src="/inmobiliaria-g/images/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg" alt="Modelo 3" />
+            <div className="model-overlay">
+              <Link to="/model-3" className="btn btn-primary">Ver Modelo 3</Link>
+            </div>
+          </div>
+          <div className="model-info">
+            <h3>Modelo 3</h3>
+            <p>Estilo natural y orgánico. Colores cálidos y verdes que inspiran confianza.</p>
+          </div>
+        </div>
       </div>
 
       <footer className="landing-footer">
