@@ -9,10 +9,11 @@ import './ModelTasteSkill.css';
 export function ModelTasteSkill() {
   const [selectedCity, setSelectedCity] = useState('Todas');
   
-  const cities = ['Todas', 'Corrientes', 'Paso de la Patria', 'Santa Ana'];
-  const properties = selectedCity === 'Todas'
-    ? mockProperties.slice(0, 6)
-    : mockProperties.filter(p => p.city.toLowerCase().includes(selectedCity.toLowerCase())).slice(0, 6);
+  const cities = ['Todas', 'Corrientes', 'Paso de la Patria', 'Santa Ana', 'Riachuelo', 'Resistencia'];
+  const properties = (selectedCity === 'Todas'
+    ? mockProperties
+    : mockProperties.filter(p => p.city.toLowerCase().includes(selectedCity.toLowerCase()))
+  ).slice(0, 16);
 
   return (
     <div className="taste-skill-page">
@@ -26,10 +27,10 @@ export function ModelTasteSkill() {
       <header className="taste-hero">
         <div className="taste-container">
           <div className="taste-dials-readout">
-            <span className="dial-badge">VARIANCE: 8</span>
-            <span className="dial-badge">MOTION: 6</span>
-            <span className="dial-badge">DENSITY: 4</span>
-            <span className="dial-meta">ANTI-SLOP DIRECTIVE ACTIVE</span>
+            <span className="dial-badge">{mockProperties.length} propiedades</span>
+            <span className="dial-badge">Corrientes + Chaco</span>
+            <span className="dial-badge">Venta y alquiler</span>
+            <span className="dial-meta">Trato directo con el propietario de la gestión</span>
           </div>
 
           <div className="taste-hero-split">
@@ -144,7 +145,7 @@ export function ModelTasteSkill() {
       <section className="taste-audit-section">
         <div className="taste-container">
           <div className="audit-card">
-            <h3>Criterios de Calidad Anti-Slop</h3>
+            <h3>Nuestros criterios de calidad</h3>
             <div className="criteria-grid">
               <div className="crit-item">
                 <CheckCircle2 size={18} className="crit-icon" />
@@ -190,8 +191,8 @@ export function ModelTasteSkill() {
             <p>Intermediación inmobiliaria y gestión arquitectónica</p>
           </div>
           <div className="taste-foot-sign">
-            <span>Skill: taste-skill</span>
-            <small>Anti-Slop Frontend • Dials 8 / 6 / 4</small>
+            <span>Luciano Jensen</span>
+            <small>WhatsApp 3794675203 &middot; Corrientes</small>
           </div>
         </div>
       </footer>

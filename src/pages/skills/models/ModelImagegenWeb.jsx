@@ -33,7 +33,7 @@ export function ModelImagegenWeb() {
             <a href="#capitulo-2" className="btn-narrative-solid">
               Comenzar Recorrido <ArrowRight size={16} />
             </a>
-            <span className="chapter-scroll-hint">Explorá 4 capítulos arquitectónicos</span>
+            <span className="chapter-scroll-hint">Recorré el catálogo completo</span>
           </div>
         </div>
       </section>
@@ -132,25 +132,59 @@ export function ModelImagegenWeb() {
         </div>
       </section>
 
-      {/* CHAPTER 5: EL MAPA DEL RECORRIDO */}
+      {/* CHAPTER 5: CATÁLOGO COMPLETO */}
+      <section className="narrative-chapter chapter-catalog">
+        <div className="narrative-container">
+          <div className="chapter-badge dark-badge">CAPÍTULO V • CATÁLOGO</div>
+          <h2 className="chapter-h2">Todas las propiedades disponibles</h2>
+          <p className="chapter-body">
+            {mockProperties.length} inmuebles en Corrientes capital, el Litoral y Chaco. Casas,
+            departamentos y lotes en venta y alquiler.
+          </p>
+          <div className="narrative-catalog-grid">
+            {mockProperties.map((prop) => (
+              <article key={prop.id} className="narrative-cat-card">
+                <FadeGallery images={prop.images} alt={prop.title} height="220px" />
+                <div className="narrative-cat-body">
+                  <span className="narrative-cat-op">{prop.operation} · {prop.type}</span>
+                  <h3>{prop.title}</h3>
+                  <p className="narrative-cat-loc"><MapPin size={13} /> {prop.location}</p>
+                  <div className="narrative-cat-foot">
+                    <strong>{prop.priceLabel}</strong>
+                    <a
+                      href={`https://wa.me/${prop.whatsapp}?text=${encodeURIComponent(`Hola, consulta por: ${prop.title}`)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Consultar <ArrowRight size={13} />
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CHAPTER 6: EL MAPA DEL RECORRIDO */}
       <SkillMapSection
         properties={mockProperties}
         variant="dark"
         accent="#c8a15a"
         tone="dark"
-        label="Capítulo V · Cartografía"
-        title="Todo el recorrido, en un mapa"
-        note="Las propiedades de los cuatro capítulos, sobre el territorio de Corrientes y el Litoral."
+        label="Capítulo VI · Cartografía"
+        title="Todo el catálogo, en un mapa"
+        note="Cada propiedad ubicada en el territorio de Corrientes, el Litoral y Chaco."
       />
 
-      {/* CHAPTER 6: FOOTER EPILOGUE */}
+      {/* CHAPTER 7: FOOTER EPILOGUE */}
       <footer className="narrative-chapter chapter-epilogue">
         <div className="narrative-container epilogue-content">
           <h3>Inmobiliaria G • Luciano Gonzalez Jensen</h3>
           <p>Corrientes, Argentina • Teléfono directo: 3794675203</p>
           <div className="skill-signature-box">
-            <span>Skill: imagegen-frontend-web</span>
-            <small>Narrativa Sección por Sección con Escalas de Hero Variadas</small>
+            <span>Contacto directo</span>
+            <small>WhatsApp 3794675203 &middot; Corrientes, Argentina</small>
           </div>
         </div>
       </footer>

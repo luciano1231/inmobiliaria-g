@@ -10,9 +10,9 @@ export function ModelBrutalist() {
   const [filterType, setFilterType] = useState('ALL');
   const [activeProperty, setActiveProperty] = useState(mockProperties[0]);
 
-  const filtered = filterType === 'ALL' 
-    ? mockProperties.slice(0, 8) 
-    : mockProperties.filter(p => p.type.toUpperCase() === filterType).slice(0, 8);
+  const filtered = filterType === 'ALL'
+    ? mockProperties
+    : mockProperties.filter(p => p.type.toUpperCase() === filterType);
 
   return (
     <div className="brutalist-page">
@@ -191,7 +191,7 @@ export function ModelBrutalist() {
 
       <footer className="brutalist-footer">
         <div className="foot-left">
-          [ SKILL: brutalist-skill ] • ENGINE: SWISS INDUSTRIAL TELEMETRY
+          INMOBILIARIA G // LUCIANO JENSEN • CONTACTO 3794675203
         </div>
         <div className="foot-right">
           CORRIENTES REAL ESTATE RAW DATABASE © 2026 // ALL RIGHTS RESERVED

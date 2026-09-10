@@ -10,8 +10,8 @@ export function ModelTasteSkillV1() {
   const [filterOp, setFilterOp] = useState('ALL');
 
   const filtered = filterOp === 'ALL'
-    ? mockProperties.slice(0, 6)
-    : mockProperties.filter(p => p.operation === filterOp).slice(0, 6);
+    ? mockProperties
+    : mockProperties.filter(p => p.operation === filterOp);
 
   return (
     <div className="taste-v1-page">
@@ -25,8 +25,8 @@ export function ModelTasteSkillV1() {
       <header className="v1-header">
         <div className="v1-container">
           <div className="v1-meta-strip">
-            <span>[ SYSTEM: TASTE-SKILL-V1 ]</span>
-            <span>EDICIÓN ORIGINAL LITORAL</span>
+            <span>[ INMOBILIARIA G ]</span>
+            <span>CORRIENTES &amp; LITORAL</span>
           </div>
 
           <h1 className="v1-massive-title">
@@ -35,7 +35,7 @@ export function ModelTasteSkillV1() {
 
           <div className="v1-split-sub">
             <p>
-              La primera versión del manifiesto anti-slop: tipografías contundentes, composición asimétrica y cero clichés de agencias genéricas.
+              Casas, departamentos y lotes en Corrientes capital y localidades vecinas. Fichas con datos reales, fotos sin retoque engañoso y contacto directo.
             </p>
             <div className="v1-badge-box">
               <strong>{mockProperties.length} INMUEBLES</strong>
@@ -82,7 +82,7 @@ export function ModelTasteSkillV1() {
                   </div>
 
                   <a 
-                    href={`https://wa.me/${prop.whatsapp}?text=Hola,%20consulta%20taste-v1:%20${encodeURIComponent(prop.title)}`}
+                    href={`https://wa.me/${prop.whatsapp}?text=${encodeURIComponent(`Hola, consulta por la propiedad: ${prop.title}`)}`}
                     target="_blank" 
                     rel="noreferrer"
                     className="v1-action-btn"
@@ -114,8 +114,8 @@ export function ModelTasteSkillV1() {
             <p>Atención directa por Luciano Jensen</p>
           </div>
           <div className="v1-sign">
-            <span>Skill: taste-skill-v1</span>
-            <small>Original Taste Directive Classic</small>
+            <span>Contacto</span>
+            <small>WhatsApp 3794675203</small>
           </div>
         </div>
       </footer>

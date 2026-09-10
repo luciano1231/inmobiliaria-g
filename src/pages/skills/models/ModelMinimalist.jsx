@@ -9,9 +9,7 @@ import './ModelMinimalist.css';
 export function ModelMinimalist() {
   const [selectedOperation, setSelectedOperation] = useState('Venta');
   
-  const properties = mockProperties
-    .filter(p => p.operation === selectedOperation)
-    .slice(0, 6);
+  const properties = mockProperties.filter(p => p.operation === selectedOperation);
 
   return (
     <div className="minimalist-page">
@@ -166,8 +164,8 @@ export function ModelMinimalist() {
             <p>Corrientes, Argentina. Arquitectura, tasaciones y gestión patrimonial.</p>
           </div>
           <div className="skill-signature">
-            <span>Skill: minimalist-skill</span>
-            <small>Directiva de Minimalismo Utilitario &amp; Editorial</small>
+            <span>Contacto directo</span>
+            <small>WhatsApp 3794675203 &middot; Corrientes Capital</small>
           </div>
         </div>
       </footer>

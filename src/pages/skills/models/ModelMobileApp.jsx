@@ -16,8 +16,8 @@ export function ModelMobileApp() {
   const [favorites, setFavorites] = useState([1]);
 
   const filtered = filterType === 'Todos'
-    ? mockProperties.slice(0, 5)
-    : mockProperties.filter(p => p.type === filterType).slice(0, 5);
+    ? mockProperties
+    : mockProperties.filter(p => p.type === filterType);
 
   const currentProp = filtered[activePropertyIndex] || filtered[0];
 
@@ -42,7 +42,7 @@ export function ModelMobileApp() {
         <div className="mobile-context-column">
           <div className="mobile-skill-pill">
             <Sparkles size={13} />
-            <span>DISPOSITIVO MÓVIL INTERACTIVO</span>
+            <span>APP DE PROPIEDADES · CORRIENTES</span>
           </div>
 
           <h1 className="context-title">
@@ -50,17 +50,19 @@ export function ModelMobileApp() {
           </h1>
 
           <p className="context-desc">
-            Diseñado según las pautas de <strong style={{color:'#fff'}}>imagegen-frontend-mobile</strong>: interfaz app-native con safe-area awareness, navegación táctil por pestañas inferiores, feed de propiedades interactivas y contacto instantáneo vía WhatsApp.
+            Un feed de propiedades pensado para el celular: buscás, filtrás por tipo, guardás
+            favoritos y consultás por WhatsApp desde la misma pantalla. Explorá Corrientes
+            capital y las localidades vecinas sin salir de la app.
           </p>
 
           <div className="context-features">
             <div className="c-feature">
-              <strong>Simulador en Vivo:</strong>
-              <span>Hacé clic en las tarjetas, pestañas inferiores y filtros del teléfono.</span>
+              <strong>Probá la demo:</strong>
+              <span>Tocá las tarjetas, las pestañas de abajo y los filtros del teléfono.</span>
             </div>
             <div className="c-feature">
-              <strong>Optimizado para Touch:</strong>
-              <span>Áreas de toque mínimas de 44px y jerarquía clara sin recargar la pantalla.</span>
+              <strong>Todo a mano:</strong>
+              <span>Fotos, precio, ambientes y contacto directo en cada propiedad.</span>
             </div>
           </div>
         </div>

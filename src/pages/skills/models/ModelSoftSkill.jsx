@@ -10,8 +10,8 @@ export function ModelSoftSkill() {
   const [activeTab, setActiveTab] = useState('ALL');
   
   const properties = activeTab === 'ALL'
-    ? mockProperties.slice(0, 6)
-    : mockProperties.filter(p => p.type === activeTab).slice(0, 6);
+    ? mockProperties
+    : mockProperties.filter(p => p.type === activeTab);
 
   return (
     <div className="soft-skill-page">
@@ -202,8 +202,8 @@ export function ModelSoftSkill() {
             <p>Corrientes, Argentina • Asesoramiento inmobiliario de alto nivel</p>
           </div>
           <div className="footer-signature">
-            <span>Skill: soft-skill</span>
-            <label>Vanguard UI Architect • High-End Visual Design</label>
+            <span>Atención por cita</span>
+            <label>WhatsApp +54 379 467-5203 &middot; Corrientes</label>
           </div>
         </div>
       </footer>

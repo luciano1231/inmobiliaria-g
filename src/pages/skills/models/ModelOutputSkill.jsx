@@ -23,15 +23,16 @@ export function ModelOutputSkill() {
         <div className="output-container">
           <div className="unabridged-tag">
             <FileSpreadsheet size={13} />
-            <span>FULL-OUTPUT PROTOCOL ACTIVE • ZERO OMISSIONS</span>
+            <span>CATÁLOGO COMPLETO · CORRIENTES Y ALREDEDORES</span>
           </div>
 
           <h1 className="output-h1">
-            Matriz Exhaustiva de Inmuebles en Corrientes y Alrededores.
+            Todos los inmuebles en una sola tabla comparativa.
           </h1>
 
           <p className="output-lead">
-            Catálogo completo e íntegro sin filtros recortados ni texto omitido. Acceso directo a especificaciones métricas, operativas, geográficas y de tasación para cada unidad registrada.
+            Cada propiedad con sus metros, ambientes, cochera, operación, ubicación y valor.
+            Hacé clic en una fila para ver su ficha ampliada con fotos y descripción.
           </p>
         </div>
       </header>
@@ -41,8 +42,8 @@ export function ModelOutputSkill() {
         <div className="output-container">
           <div className="table-wrapper">
             <div className="table-topbar">
-              <span>TABLA COMPARATIVA GLOBAL ({mockProperties.length} UNIDADES)</span>
-              <span>REGISTRO SIN CORTES</span>
+              <span>TABLA COMPARATIVA ({mockProperties.length} PROPIEDADES)</span>
+              <span>CATÁLOGO COMPLETO</span>
             </div>
 
             <div className="table-responsive">
@@ -155,12 +156,12 @@ export function ModelOutputSkill() {
       <footer className="output-footer">
         <div className="output-container footer-bar">
           <div>
-            <strong>INMOBILIARIA G • REGISTRO COMPLETO</strong>
-            <p>Datos no truncados verificados en Corrientes Capital</p>
+            <strong>INMOBILIARIA G • CATÁLOGO COMPLETO</strong>
+            <p>Propiedades verificadas en Corrientes y alrededores</p>
           </div>
           <div className="skill-footer-note">
-            <span>Skill: output-skill</span>
-            <small>Full Output Protocol • Exhaustive Data Delivery</small>
+            <span>Contacto directo</span>
+            <small>WhatsApp 3794675203</small>
           </div>
         </div>
       </footer>

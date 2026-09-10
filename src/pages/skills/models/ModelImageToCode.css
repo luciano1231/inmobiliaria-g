@@ -54,6 +54,33 @@
   line-height: 1.6;
 }
 
+.img2code-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.img2code-filter-btn {
+  background: #111722;
+  border: 1px solid #1e293b;
+  color: #94a3b8;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.img2code-filter-btn:hover {
+  border-color: #38bdf8;
+  color: #e2e8f0;
+}
+.img2code-filter-btn.active {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #0b1220;
+}
+
 .toggle-code-bar {
   display: flex;
   gap: 12px;

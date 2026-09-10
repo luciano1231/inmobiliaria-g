@@ -35,6 +35,37 @@ const terrenoB = [
   `${IMG}house-key-calculator-with-dollar-bills.jpg`,
 ];
 
+// Pool de fotos (Unsplash, URLs estables) para enriquecer el carrusel de cada propiedad.
+const U = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1100&q=70`;
+const PHOTO_POOL = [
+  U('1568605114967-8130f3a36994'), // casa moderna fachada
+  U('1570129477492-45c003edd2be'), // casa exterior atardecer
+  U('1512917774080-9991f1c4c750'), // casa suburbana
+  U('1493809842364-78817add7ffb'), // living luminoso
+  U('1502672260266-1c1ef2d93688'), // interior comedor
+  U('1560448204-e02f11c3d0e2'), // interior moderno
+  U('1580587771525-78b9dba3b914'), // casa blanca jardin
+  U('1600585154340-be6161a56a0c'), // dormitorio
+  U('1600607687939-ce8a6c25118c'), // cocina moderna
+  U('1600566753086-00f18fb6b3ea'), // living minimal
+  U('1600047509807-ba8f99d2cdde'), // cocina isla
+  U('1600210492486-724fe5c67fb0'), // baño
+  U('1583608205776-bfd35f0d9f83'), // duplex
+  U('1512918728675-ed5a9ecdebfd'), // fachada ladrillo
+  U('1449844908441-8829872d2607'), // casa campo
+  U('1560185007-cde436f6a4d0'), // casa dos plantas
+  U('1502005229762-cf1b2da7c5d6'), // edificio depto
+  U('1522708323590-d24dbb6b0267'), // living acogedor
+  U('1484154218962-a197022b5858'), // interior blanco
+  U('1484101403633-562f891dc89a'), // escritorio ambiente
+  U('1505691938895-1758d7feb511'), // dormitorio claro
+  U('1567496898669-ee935f5f647a'), // exterior moderno
+  U('1600585152220-90363fe7e115'), // casa piscina
+  U('1613490493576-7fde63acd811'), // casa lujo noche
+];
+
+const dedupe = (arr) => [...new Set(arr)];
+
 const WA = '5493794675203';
 
 // Helpers de armado para mantener consistencia de campos
@@ -52,7 +83,7 @@ const make = (o) => ({
   ...o,
 });
 
-export const mockProperties = [
+const RAW_PROPERTIES = [
   // ============ CORRIENTES CAPITAL ============
   make({
     id: 1,
@@ -693,7 +724,295 @@ export const mockProperties = [
     images: terrenoB,
     amenities: ['Agua', 'Luz', 'Cloacas', 'Asfalto'],
   }),
+
+  // ============ CATÁLOGO AMPLIADO ============
+  make({
+    id: 33,
+    title: 'Casa a estrenar en Barrio Molina Punta',
+    type: 'Casa',
+    operation: 'Venta',
+    price: 165000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Corrientes Capital',
+    neighborhood: 'Molina Punta',
+    coordinates: [-27.4585, -58.815],
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 155,
+    garage: true,
+    description:
+      'Casa moderna de tres dormitorios con cocina integrada, patio con parrilla y cochera cubierta. Barrio en pleno crecimiento sobre la ribera.',
+    images: casaB,
+    amenities: ['Cochera', 'Parrilla', 'Patio', 'Cocina integrada'],
+  }),
+  make({
+    id: 34,
+    title: 'Departamento 1 dormitorio en Junín y Mendoza',
+    type: 'Departamento',
+    operation: 'Alquiler',
+    price: 260000,
+    currency: 'ARS',
+    province: 'Corrientes',
+    city: 'Corrientes Capital',
+    neighborhood: 'Centro',
+    coordinates: [-27.4675, -58.8342],
+    bedrooms: 1,
+    bathrooms: 1,
+    area: 45,
+    garage: false,
+    description:
+      'Unidad luminosa a una cuadra de la peatonal, ideal para pareja o profesional. Edificio con seguridad y expensas bajas.',
+    images: deptoA,
+    amenities: ['Ascensor', 'Seguridad', 'Balcón'],
+  }),
+  make({
+    id: 35,
+    title: 'Casa con pileta en Santa Catalina',
+    type: 'Casa',
+    operation: 'Venta',
+    price: 198000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Corrientes Capital',
+    neighborhood: 'Santa Catalina',
+    coordinates: [-27.4805, -58.7995],
+    bedrooms: 4,
+    bathrooms: 3,
+    area: 240,
+    garage: true,
+    description:
+      'Casa de cuatro dormitorios en country abierto, con pileta climatizada, quincho y jardín parquizado. Excelente para familia grande.',
+    images: casaA,
+    amenities: ['Pileta climatizada', 'Quincho', 'Cochera doble', 'Jardín'],
+  }),
+  make({
+    id: 36,
+    title: 'Monoambiente frente a la UNNE',
+    type: 'Departamento',
+    operation: 'Alquiler',
+    price: 195000,
+    currency: 'ARS',
+    province: 'Corrientes',
+    city: 'Corrientes Capital',
+    neighborhood: 'Barrio Universitario',
+    coordinates: [-27.4632, -58.8265],
+    bedrooms: 1,
+    bathrooms: 1,
+    area: 32,
+    garage: false,
+    description:
+      'Monoambiente amueblado frente a la facultad, con kitchenette equipada y aire acondicionado. Ideal estudiante.',
+    images: deptoB,
+    amenities: ['Amueblado', 'Aire acondicionado', 'Internet incluido'],
+  }),
+  make({
+    id: 37,
+    title: 'Casa de dos plantas en Barrio Aeropuerto',
+    type: 'Casa',
+    operation: 'Venta',
+    price: 132000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Corrientes Capital',
+    neighborhood: 'Barrio Aeropuerto',
+    coordinates: [-27.4525, -58.7715],
+    bedrooms: 3,
+    bathrooms: 2,
+    area: 170,
+    garage: true,
+    description:
+      'Casa de dos plantas con suite en planta alta, escritorio, cochera para dos autos y patio con deck. Calle asfaltada y arbolada.',
+    images: casaC,
+    amenities: ['Suite', 'Escritorio', 'Cochera', 'Deck'],
+  }),
+  make({
+    id: 38,
+    title: 'Duplex a estrenar en Paso de la Patria',
+    type: 'Casa',
+    operation: 'Venta',
+    price: 74000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Paso de la Patria',
+    neighborhood: 'Zona centro',
+    coordinates: [-27.3205, -58.5795],
+    bedrooms: 2,
+    bathrooms: 1,
+    area: 78,
+    garage: true,
+    description:
+      'Dúplex nuevo a cuatro cuadras del río, con patio, parrilla y cochera. Pensado para renta turística o vivienda permanente.',
+    images: casaA,
+    amenities: ['Parrilla', 'Cochera', 'Patio'],
+  }),
+  make({
+    id: 39,
+    title: 'Terreno alto en San Cosme centro',
+    type: 'Terreno',
+    operation: 'Venta',
+    price: 24000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'San Cosme',
+    neighborhood: 'Centro',
+    coordinates: [-27.3685, -58.5165],
+    area: 500,
+    description:
+      'Lote alto de 12,5 x 40 m a dos cuadras de la plaza, con todos los servicios en el frente. No se inunda.',
+    images: terrenoA,
+    amenities: ['Agua', 'Luz', 'Cloacas', 'No inundable'],
+  }),
+  make({
+    id: 40,
+    title: 'Casa familiar en Riachuelo',
+    type: 'Casa',
+    operation: 'Alquiler',
+    price: 300000,
+    currency: 'ARS',
+    province: 'Corrientes',
+    city: 'Riachuelo',
+    neighborhood: 'Zona urbana',
+    coordinates: [-27.5655, -58.7515],
+    bedrooms: 3,
+    bathrooms: 1,
+    area: 120,
+    garage: true,
+    description:
+      'Casa de tres dormitorios con galería, cochera y amplio patio con frutales. A 15 minutos de Corrientes por Ruta 12.',
+    images: casaC,
+    amenities: ['Galería', 'Cochera', 'Frutales'],
+  }),
+  make({
+    id: 41,
+    title: 'Departamento en pozo sobre la Costanera',
+    type: 'Departamento',
+    operation: 'Venta',
+    price: 68000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Corrientes Capital',
+    neighborhood: 'Costanera Sur',
+    coordinates: [-27.485, -58.8135],
+    bedrooms: 1,
+    bathrooms: 1,
+    area: 48,
+    garage: true,
+    description:
+      'Unidad de un dormitorio en desarrollo con entrega a 18 meses. Amenities con piscina, gimnasio y coworking. Financiación en pesos.',
+    images: deptoA,
+    amenities: ['Piscina', 'Gimnasio', 'Coworking', 'Cochera'],
+  }),
+  make({
+    id: 42,
+    title: 'Casa quinta en Santa Ana con arboleda',
+    type: 'Casa',
+    operation: 'Venta',
+    price: 96000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Santa Ana',
+    neighborhood: 'Zona quintas',
+    coordinates: [-27.4525, -58.6465],
+    bedrooms: 2,
+    bathrooms: 2,
+    area: 130,
+    garage: true,
+    description:
+      'Casa quinta sobre lote de 2.000 m² con monte nativo, pileta de material y galpón de guardado. Ideal descanso de fin de semana.',
+    images: casaA,
+    amenities: ['Pileta', 'Monte nativo', 'Galpón', 'Parrilla'],
+  }),
+  make({
+    id: 43,
+    title: 'Departamento 3 ambientes en Resistencia centro',
+    type: 'Departamento',
+    operation: 'Alquiler',
+    price: 330000,
+    currency: 'ARS',
+    province: 'Chaco',
+    city: 'Resistencia',
+    neighborhood: 'Centro',
+    coordinates: [-27.4508, -58.9835],
+    bedrooms: 2,
+    bathrooms: 1,
+    area: 70,
+    garage: true,
+    description:
+      'Departamento de dos dormitorios con dependencia, cochera fija y balcón corrido. A dos cuadras de la plaza central.',
+    images: deptoB,
+    amenities: ['Cochera', 'Balcón', 'Dependencia'],
+  }),
+  make({
+    id: 44,
+    title: 'Casa con local comercial en Empedrado',
+    type: 'Casa',
+    operation: 'Venta',
+    price: 63000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Empedrado',
+    neighborhood: 'Centro',
+    coordinates: [-27.9525, -58.8085],
+    bedrooms: 2,
+    bathrooms: 1,
+    area: 150,
+    garage: true,
+    description:
+      'Propiedad esquina con vivienda de dos dormitorios y local independiente al frente. Sobre calle principal, alto tránsito.',
+    images: casaC,
+    amenities: ['Local comercial', 'Cochera', 'Esquina'],
+  }),
+  make({
+    id: 45,
+    title: 'Lote en barrio cerrado Santa Ana Village',
+    type: 'Terreno',
+    operation: 'Venta',
+    price: 38000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Santa Ana',
+    neighborhood: 'Santa Ana Village',
+    coordinates: [-27.4485, -58.6405],
+    area: 720,
+    description:
+      'Lote interno en barrio cerrado con seguridad 24 h, club house y cancha de fútbol. Servicios subterráneos y calles de hormigón.',
+    images: terrenoB,
+    amenities: ['Seguridad 24h', 'Club house', 'Servicios subterráneos'],
+  }),
+  make({
+    id: 46,
+    title: 'Casa premium en Corrientes con vista al río',
+    type: 'Casa',
+    operation: 'Venta',
+    price: 345000,
+    currency: 'USD',
+    province: 'Corrientes',
+    city: 'Corrientes Capital',
+    neighborhood: 'Costanera Norte',
+    coordinates: [-27.4602, -58.8388],
+    bedrooms: 4,
+    bathrooms: 4,
+    area: 320,
+    garage: true,
+    featured: true,
+    description:
+      'Residencia de autor sobre la costanera, con doble altura en el living, ventanales al Paraná, pileta desbordante y cochera para tres autos.',
+    images: casaB,
+    amenities: ['Vista al río', 'Pileta desbordante', 'Doble altura', 'Cochera triple', 'Domótica'],
+  }),
 ];
+
+// Cada propiedad suma 3 fotos del pool para que el carrusel tenga varias imágenes.
+export const mockProperties = RAW_PROPERTIES.map((p, i) => ({
+  ...p,
+  images: dedupe([
+    ...p.images,
+    PHOTO_POOL[i % PHOTO_POOL.length],
+    PHOTO_POOL[(i + 8) % PHOTO_POOL.length],
+    PHOTO_POOL[(i + 15) % PHOTO_POOL.length],
+  ]),
+}));
 
 // Listas derivadas para poblar los filtros
 export const PROVINCES = [...new Set(mockProperties.map((p) => p.province))].sort();

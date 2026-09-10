@@ -15,7 +15,7 @@ export function ModelStitch() {
     const matchesQuery = p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          p.city.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCat && matchesQuery;
-  }).slice(0, 6);
+  });
 
   return (
     <div className="stitch-page">
@@ -32,7 +32,7 @@ export function ModelStitch() {
             <div className="stitch-logo">
               <span className="stitch-square"></span>
               <strong>STITCH.REALTY</strong>
-              <span className="version-pill">v2.4 SYSTEM</span>
+              <span className="version-pill">CORRIENTES</span>
             </div>
 
             <div className="stitch-nav-meta">
@@ -186,11 +186,11 @@ export function ModelStitch() {
         <div className="stitch-container stitch-footer-content">
           <div className="stitch-foot-left">
             <span className="square-tiny"></span>
-            <strong>STITCH.REALTY • SISTEMA DE IDENTIDAD SEMÁNTICA</strong>
+            <strong>STITCH.REALTY • CORRIENTES, ARGENTINA</strong>
           </div>
           <div className="stitch-foot-right">
-            <span>Skill: stitch-design-taste</span>
-            <small>Diseñado según DESIGN.md Semantic Rules</small>
+            <span>Luciano Jensen</span>
+            <small>WhatsApp 3794675203 &middot; Gestión patrimonial</small>
           </div>
         </div>
       </footer>

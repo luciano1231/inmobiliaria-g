@@ -9,9 +9,10 @@ import './ModelRedesign.css';
 export function ModelRedesign() {
   const [filterType, setFilterType] = useState('ALL');
   
-  const properties = filterType === 'ALL'
-    ? mockProperties.slice(0, 4)
-    : mockProperties.filter(p => p.type === filterType).slice(0, 4);
+  const properties = (filterType === 'ALL'
+    ? mockProperties
+    : mockProperties.filter(p => p.type === filterType)
+  ).slice(0, 12);
 
   return (
     <div className="redesign-page">
@@ -26,7 +27,7 @@ export function ModelRedesign() {
         <div className="redesign-container">
           <div className="audit-provenance-pill">
             <Sparkles size={13} />
-            <span>AUDITORÍA DE REDISEÑO APLICADA</span>
+            <span>PROPIEDADES VERIFICADAS EN CORRIENTES</span>
           </div>
 
           <h1 className="redesign-h1">
@@ -136,22 +137,22 @@ export function ModelRedesign() {
       <section className="redesign-audit-box-section">
         <div className="redesign-container">
           <div className="audit-summary-card">
-            <h3>Por qué este rediseño supera al estándar</h3>
+            <h3>Cómo trabajamos cada propiedad</h3>
             <div className="summary-triad">
               <div className="triad-item">
                 <div className="triad-icon"><Check size={16} /></div>
-                <h4>Fin de la simetría aburrida</h4>
-                <p>Reemplazo de la cuadrícula monótona por composición zig-zag con pesos visuales equilibrados.</p>
+                <h4>Verificación de dominio</h4>
+                <p>Informe del Registro de la Propiedad Inmueble de Corrientes antes de publicar cualquier inmueble.</p>
               </div>
               <div className="triad-item">
                 <div className="triad-icon"><Check size={16} /></div>
-                <h4>Tipografía con carácter</h4>
-                <p>Uso de tracking negativo en titulares y figuras numéricas tabulares para claridad de tasación.</p>
+                <h4>Tasación con datos reales</h4>
+                <p>Valores comparables de operaciones recientes en la zona, sin precios inflados ni sorpresas.</p>
               </div>
               <div className="triad-item">
                 <div className="triad-icon"><Check size={16} /></div>
-                <h4>Trato directo verificado</h4>
-                <p>Contacto sin formularios eternos: comunicación inmediata por WhatsApp con el titular.</p>
+                <h4>Trato directo</h4>
+                <p>Sin formularios eternos: hablás por WhatsApp directamente con Luciano Jensen.</p>
               </div>
             </div>
           </div>
@@ -173,11 +174,11 @@ export function ModelRedesign() {
         <div className="redesign-container footer-split">
           <div>
             <strong>INMOBILIARIA G • CORRIENTES</strong>
-            <p>Rediseño de experiencia digital para el mercado inmobiliario</p>
+            <p>Casas, departamentos y lotes en Corrientes y alrededores</p>
           </div>
           <div className="redesign-skill-credit">
-            <span>Skill: redesign-skill</span>
-            <small>Auditoría Anti-Patrones &amp; Elevación Estética</small>
+            <span>Contacto directo</span>
+            <small>WhatsApp 3794675203</small>
           </div>
         </div>
       </footer>

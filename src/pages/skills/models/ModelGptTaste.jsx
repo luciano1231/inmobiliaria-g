@@ -10,8 +10,8 @@ export function ModelGptTaste() {
   const [activeTab, setActiveTab] = useState('ALL');
   
   const properties = activeTab === 'ALL'
-    ? mockProperties.slice(0, 5)
-    : mockProperties.filter(p => p.type === activeTab).slice(0, 5);
+    ? mockProperties
+    : mockProperties.filter(p => p.type === activeTab);
 
   return (
     <div className="gpt-taste-page">
@@ -199,8 +199,8 @@ export function ModelGptTaste() {
               <p>Desarrollos e intermediación inmobiliaria en Corrientes</p>
             </div>
             <div className="footer-skill-tag">
-              <span>Skill: gpt-tasteskill</span>
-              <label>AIDA Page Framework &amp; Gapless Bento Grid</label>
+              <span>Consultas</span>
+              <label>WhatsApp 3794675203 &middot; Corrientes Capital</label>
             </div>
           </div>
         </div>

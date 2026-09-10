@@ -10,8 +10,8 @@ export function ModelBrandkit() {
   const [activeBoard, setActiveBoard] = useState('ALL');
   
   const properties = activeBoard === 'ALL'
-    ? mockProperties.slice(0, 4)
-    : mockProperties.filter(p => p.type === activeBoard).slice(0, 4);
+    ? mockProperties
+    : mockProperties.filter(p => p.type === activeBoard);
 
   return (
     <div className="brandkit-page">
@@ -181,8 +181,8 @@ export function ModelBrandkit() {
               <p>Corrientes Capital • Contacto directo: 3794675203</p>
             </div>
             <div className="brandkit-skill-ref">
-              <span>Skill: brandkit</span>
-              <label>Guidelines &amp; Visual Identity System</label>
+              <span>Contacto</span>
+              <label>WhatsApp 3794675203 &middot; Corrientes</label>
             </div>
           </div>
         </footer>
