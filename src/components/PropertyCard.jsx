@@ -77,11 +77,14 @@ export function PropertyCard({ property }) {
           </>
         )}
         <div className="property-type glass">{property.type}</div>
+        <div className={`property-operation ${property.operation === 'Alquiler' ? 'op-rent' : 'op-sale'}`}>
+          {property.operation}
+        </div>
       </div>
-      
+
       <div className="property-content">
         <div className="property-price">
-          {property.currency} {property.price.toLocaleString()}
+          {property.priceLabel || `${property.currency} ${property.price.toLocaleString()}`}
         </div>
         <h3 className="property-title">{property.title}</h3>
         
@@ -105,7 +108,7 @@ export function PropertyCard({ property }) {
               <Square size={16} /> <span>{property.area} m²</span>
             </div>
           )}
-          {property.amenities?.includes("Cochera") && (
+          {property.garage && (
             <div className="feature flex items-center gap-2">
               <Car size={16} /> <span>Coch.</span>
             </div>

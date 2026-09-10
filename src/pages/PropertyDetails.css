@@ -19,6 +19,27 @@
   margin-bottom: 2rem;
 }
 
+.details-tags {
+  margin-bottom: 0.75rem;
+}
+
+.detail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+.detail-badge.op-sale { background: var(--color-secondary); }
+.detail-badge.op-rent { background: var(--color-accent); }
+.detail-badge.neutral {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
 .details-title {
   font-size: 2.5rem;
   color: var(--color-primary);

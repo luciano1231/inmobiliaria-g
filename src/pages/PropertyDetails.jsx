@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { mockProperties } from '../data/mockProperties';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
-import { MapPin, Bed, Bath, Square, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { MapPin, Bed, Bath, Square, ArrowLeft, CheckCircle2, Car, Tag } from 'lucide-react';
 import './PropertyDetails.css';
 
 export function PropertyDetails() {
@@ -22,13 +22,19 @@ export function PropertyDetails() {
 
         <div className="details-header flex justify-between items-center">
           <div>
+            <div className="details-tags flex items-center gap-2">
+              <span className={`detail-badge ${property.operation === 'Alquiler' ? 'op-rent' : 'op-sale'}`}>
+                <Tag size={14} /> {property.operation}
+              </span>
+              <span className="detail-badge neutral">{property.type}</span>
+            </div>
             <h1 className="details-title">{property.title}</h1>
             <div className="details-location text-muted flex items-center gap-2">
-              <MapPin size={18} /> {property.location}
+              <MapPin size={18} /> {property.neighborhood}, {property.city}, {property.province}
             </div>
           </div>
           <div className="details-price">
-            {property.currency} {property.price.toLocaleString()}
+            {property.priceLabel || `${property.currency} ${property.price.toLocaleString()}`}
           </div>
         </div>
 
@@ -71,6 +77,13 @@ export function PropertyDetails() {
                   </div>
                 </div>
               )}
+              <div className="feature-item flex items-center gap-2">
+                <Car size={24} className="text-primary" />
+                <div>
+                  <strong>{property.garage ? 'Sí' : 'No'}</strong>
+                  <span>Cochera</span>
+                </div>
+              </div>
             </div>
 
             <div className="description-section">

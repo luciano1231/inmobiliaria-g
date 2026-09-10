@@ -102,6 +102,24 @@
   color: var(--color-primary);
 }
 
+.property-operation {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.property-operation.op-sale {
+  background: var(--color-secondary);
+}
+.property-operation.op-rent {
+  background: var(--color-accent);
+}
+
 .property-content {
   padding: 1.5rem;
   display: flex;
