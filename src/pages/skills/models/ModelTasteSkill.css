@@ -1,0 +1,477 @@
+/* TASTESKILL ANTI-SLOP FRONTEND STYLES */
+.taste-skill-page {
+  background-color: #faf9f5;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 85px;
+  line-height: 1.55;
+}
+
+.taste-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Dials Readout */
+.taste-dials-readout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  flex-wrap: wrap;
+}
+
+.dial-badge {
+  background: #111111;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.dial-meta {
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Hero Section */
+.taste-hero {
+  padding: 40px 0 60px;
+  border-bottom: 1px solid #e8e6df;
+}
+
+.taste-hero-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.taste-kicker {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #c2410c;
+  margin-bottom: 12px;
+}
+
+.taste-h1 {
+  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #111111;
+  margin: 0 0 20px;
+}
+
+.taste-lead {
+  font-size: 1.08rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+.taste-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.taste-btn-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 6px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.taste-btn-black:hover {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+.curated-count {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+.curated-count strong {
+  color: #111;
+}
+
+/* Offset Card */
+.offset-card {
+  background: #ffffff;
+  border: 1px solid #e0ded7;
+  padding: 12px;
+  box-shadow: 12px 16px 0px #e8e5dc;
+  border-radius: 4px;
+}
+
+.offset-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.offset-card-caption {
+  padding: 16px 8px 4px;
+}
+
+.offset-card-caption span {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: #c2410c;
+  font-weight: 700;
+  display: block;
+}
+
+.offset-card-caption strong {
+  font-size: 1.1rem;
+  color: #111;
+  display: block;
+  margin: 4px 0;
+}
+
+.offset-card-caption p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #666;
+}
+
+/* Filter Strip */
+.taste-filter-strip {
+  background: #ffffff;
+  border-bottom: 1px solid #e8e6df;
+  padding: 16px 0;
+}
+
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #777;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.taste-pill {
+  background: #f4f2eb;
+  border: 1px solid #e5e3dc;
+  color: #444;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.taste-pill:hover {
+  background: #e9e6dd;
+  color: #111;
+}
+
+.taste-pill.active {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+/* Alternating Row Stream */
+.taste-main {
+  padding: 60px 0 80px;
+}
+
+.taste-cards-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.taste-prop-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  background: #ffffff;
+  border: 1px solid #e5e3dc;
+  padding: 24px;
+  border-radius: 8px;
+  align-items: center;
+  transition: border-color 0.2s;
+}
+
+.taste-prop-row:hover {
+  border-color: #111111;
+}
+
+.taste-prop-row.row-reversed {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.taste-prop-row.row-reversed .taste-prop-media {
+  order: 2;
+}
+
+.taste-prop-media {
+  position: relative;
+  height: 280px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.taste-prop-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prop-city-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.taste-prop-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.prop-badge-line {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.op-tag {
+  background: #111111;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+
+.type-tag {
+  background: #f0eee6;
+  color: #555;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.prop-heading {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  color: #111;
+}
+
+.prop-location-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0 0 14px;
+}
+
+.prop-description {
+  font-size: 0.88rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.prop-specs-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #f0eee6;
+  border-bottom: 1px solid #f0eee6;
+  margin-bottom: 24px;
+}
+
+.prop-specs-table span {
+  display: block;
+  font-size: 0.68rem;
+  color: #777;
+}
+
+.prop-specs-table strong {
+  font-size: 0.88rem;
+  color: #111;
+}
+
+.prop-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-display {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.taste-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #111;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.taste-btn-outline:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Audit Section */
+.taste-audit-section {
+  padding: 40px 0 80px;
+}
+
+.audit-card {
+  background: #ffffff;
+  border: 1px solid #e5e3dc;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.audit-card h3 {
+  font-size: 1.4rem;
+  margin: 0 0 24px;
+  letter-spacing: -0.02em;
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.crit-item {
+  display: flex;
+  gap: 12px;
+}
+
+.crit-icon {
+  color: #c2410c;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.crit-item strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.crit-item p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Footer */
+.taste-footer {
+  border-top: 1px solid #e5e3dc;
+  padding: 30px 0;
+}
+
+.taste-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.taste-footer-row strong {
+  color: #111;
+}
+
+.taste-footer-row p {
+  margin: 2px 0 0;
+}
+
+.taste-foot-sign {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.taste-foot-sign span {
+  font-family: monospace;
+  font-weight: 700;
+  color: #111;
+}
+
+@media (max-width: 860px) {
+  .taste-hero-split,
+  .taste-prop-row,
+  .taste-prop-row.row-reversed {
+    grid-template-columns: 1fr;
+  }
+  .taste-prop-row.row-reversed .taste-prop-media {
+    order: 0;
+  }
+  .criteria-grid {
+    grid-template-columns: 1fr;
+  }
+  .taste-footer-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .taste-foot-sign {
+    text-align: center;
+  }
+}

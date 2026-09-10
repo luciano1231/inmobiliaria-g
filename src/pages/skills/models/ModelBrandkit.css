@@ -1,0 +1,380 @@
+/* BRANDKIT GUIDELINES & IDENTITY BOARD STYLES */
+.brandkit-page {
+  background-color: #0f1013;
+  color: #e5ded6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 85px 0 60px;
+  line-height: 1.5;
+}
+
+.brandkit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Base Presentation Board */
+.brandkit-board {
+  background: #17191e;
+  border: 1px solid #282b33;
+  border-radius: 12px;
+  padding: 36px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.board-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #282b33;
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: #7d8594;
+}
+
+.deck-id {
+  color: #c29b63;
+  font-weight: 700;
+}
+
+/* Header Board */
+.board-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+
+.brand-symbol-box {
+  width: 90px;
+  height: 90px;
+  background: #242c35;
+  border: 1px solid #c29b63;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-monogram {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #c29b63;
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+  color: #a0aab8;
+  margin-top: 4px;
+}
+
+.brand-h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.brand-desc {
+  font-size: 0.98rem;
+  color: #9da6b5;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0;
+}
+
+/* Color Taxonomy */
+.color-taxonomy-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: #121316;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #242830;
+}
+
+.color-swatch-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.swatch-color {
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 4px;
+}
+
+.color-swatch-item strong {
+  font-size: 0.78rem;
+  color: #ffffff;
+}
+
+.color-swatch-item small {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #7d8594;
+}
+
+/* Assets Board */
+.assets-filter-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.brand-tab {
+  background: #121316;
+  border: 1px solid #282b33;
+  color: #9da6b5;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.brand-tab:hover {
+  background: #242c35;
+  color: #fff;
+}
+
+.brand-tab.active {
+  background: #c29b63;
+  color: #121316;
+  border-color: #c29b63;
+  font-weight: 700;
+}
+
+.brandkit-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.brand-asset-card {
+  background: #131418;
+  border: 1px solid #282b33;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-card-topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #1b1e24;
+  font-size: 0.68rem;
+  font-family: monospace;
+}
+
+.asset-code {
+  color: #7d8594;
+}
+
+.asset-tag {
+  color: #c29b63;
+  font-weight: 700;
+}
+
+.brand-card-media {
+  position: relative;
+  height: 180px;
+}
+
+.brand-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-blueprint-mark {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #c29b63;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.brand-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.asset-loc {
+  font-size: 0.72rem;
+  color: #7d8594;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.asset-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.asset-description {
+  font-size: 0.78rem;
+  color: #8892a0;
+  line-height: 1.45;
+  margin: 0 0 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.asset-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: #17191e;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #242830;
+  margin-bottom: 14px;
+}
+
+.asset-specs-grid label {
+  display: block;
+  font-size: 0.6rem;
+  color: #616b7b;
+}
+
+.asset-specs-grid strong {
+  font-size: 0.72rem;
+  color: #e5ded6;
+}
+
+.val-text {
+  color: #c29b63 !important;
+}
+
+.brand-card-cta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #242c35;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.brand-card-cta:hover {
+  background: #c29b63;
+  color: #121316;
+}
+
+/* Pillars Board */
+.pillars-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.pillar-column {
+  border-left: 2px solid #282b33;
+  padding-left: 20px;
+}
+
+.pillar-num {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #c29b63;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pillar-column h4 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.pillar-column p {
+  color: #8892a0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Footer Deck */
+.footer-deck-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: #7d8594;
+}
+
+.footer-deck-flex strong {
+  color: #fff;
+}
+
+.footer-deck-flex p {
+  margin: 2px 0 0;
+}
+
+.brandkit-skill-ref {
+  text-align: right;
+}
+
+.brandkit-skill-ref span {
+  font-family: monospace;
+  color: #c29b63;
+  font-weight: 700;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .board-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .color-taxonomy-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pillars-layout {
+    grid-template-columns: 1fr;
+  }
+  .footer-deck-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .brandkit-skill-ref {
+    text-align: center;
+  }
+}

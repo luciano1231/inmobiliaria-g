@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, SlidersHorizontal, MessageCircle, Building2, ArrowRight } from 'lucide-react';
+import { MapPin, SlidersHorizontal, MessageCircle, Building2, ArrowRight, Sparkles, Layers } from 'lucide-react';
 import { mockProperties } from '../data/mockProperties';
 import './LandingPage.css';
 
@@ -69,6 +69,17 @@ export function LandingPage() {
           Tres diseños distintos que comparten la misma base de propiedades, mapa
           interactivo y sistema de filtros. Elegí el que mejor se adapte a tu marca.
         </p>
+
+        {/* NUEVO BOTÓN DESTACADO PARA MODELOS POR SKILLS */}
+        <div className="landing-header-actions">
+          <Link to="/skills" className="btn-skills-lab">
+            <Sparkles size={18} className="sparkle-icon-pulse" />
+            <span>Explorar Modelos por Skills (.agent/skills)</span>
+            <span className="skills-badge-count">13 Diseños</span>
+            <ArrowRight size={16} />
+          </Link>
+        </div>
+
         <div className="landing-stats">
           <div><strong>{total}</strong><span>propiedades</span></div>
           <div><strong>{enVenta}</strong><span>en venta</span></div>
@@ -111,6 +122,43 @@ export function LandingPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* NUEVA SECCIÓN DESTACADA: BANNER DEL LABORATORIO DE SKILLS */}
+        <section className="landing-skills-banner-section">
+          <div className="skills-lab-banner">
+            <div className="skills-banner-content">
+              <span className="skills-banner-tag">
+                <Sparkles size={15} /> Laboratorio de Agent Skills (.agent/skills)
+              </span>
+              <h2>¿Querés ver más estilos? Diseñamos un modelo por cada Skill instalada</h2>
+              <p>
+                13 páginas completas construidas respetando las directivas exactas de cada skill:
+                industrial brutalista, minimalismo editorial, diseño agency de $150k, bento AIDA,
+                interfaz móvil nativa, identidad de marca, y más.
+              </p>
+              <div className="skills-banner-pills">
+                <span>brutalist-skill</span>
+                <span>minimalist-skill</span>
+                <span>soft-skill</span>
+                <span>stitch-skill</span>
+                <span>gpt-tasteskill</span>
+                <span>taste-skill</span>
+                <span>brandkit</span>
+                <span>redesign-skill</span>
+                <span>imagegen-frontend-mobile</span>
+                <span>imagegen-frontend-web</span>
+                <span>image-to-code-skill</span>
+                <span>taste-skill-v1</span>
+                <span>output-skill</span>
+              </div>
+              <Link to="/skills" className="btn-skills-open">
+                <Layers size={18} />
+                <span>Explorar los 13 Modelos de Skills</span>
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </section>
 

@@ -1,0 +1,402 @@
+/* MODERN ARCHITECTURAL REDESIGN STYLES */
+.redesign-page {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 85px;
+  line-height: 1.6;
+}
+
+.redesign-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero */
+.redesign-hero {
+  padding: 60px 0 80px;
+  border-bottom: 1px solid #21262d;
+}
+
+.audit-provenance-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(224, 159, 62, 0.12);
+  border: 1px solid rgba(224, 159, 62, 0.3);
+  color: #e09f3e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  margin-bottom: 24px;
+}
+
+.redesign-h1 {
+  font-size: clamp(2.3rem, 4.6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  max-width: 900px;
+  margin: 0 0 20px;
+}
+
+.redesign-lead {
+  font-size: 1.12rem;
+  color: #8b949e;
+  max-width: 680px;
+  margin: 0 0 40px;
+  line-height: 1.65;
+}
+
+.redesign-stats-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  padding: 16px 28px;
+  border-radius: 12px;
+}
+
+.stat-unit strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.stat-unit span {
+  font-size: 0.75rem;
+  color: #8b949e;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background: #30363d;
+}
+
+/* 2-Column Zig-Zag Layout */
+.redesign-main {
+  padding: 80px 0 100px;
+}
+
+.redesign-section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.eyebrow-accent {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #e09f3e;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.section-title-clean {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.redesign-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.redesign-tab-btn {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.redesign-tab-btn:hover {
+  color: #ffffff;
+  border-color: #8b949e;
+}
+
+.redesign-tab-btn.active {
+  background: #e09f3e;
+  color: #0d1117;
+  border-color: #e09f3e;
+  font-weight: 700;
+}
+
+.zigzag-collection {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.zigzag-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 48px;
+  align-items: center;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 32px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.zigzag-card:hover {
+  border-color: rgba(224, 159, 62, 0.4);
+  transform: translateY(-2px);
+}
+
+.zigzag-reversed {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.zigzag-reversed .zigzag-media {
+  order: 2;
+}
+
+.zigzag-media {
+  position: relative;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.zigzag-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.zigzag-card:hover .zigzag-media img {
+  transform: scale(1.03);
+}
+
+.zigzag-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.zigzag-price-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: #e09f3e;
+  color: #0d1117;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.zigzag-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.zigzag-meta-loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #8b949e;
+  margin-bottom: 8px;
+}
+
+.zigzag-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.zigzag-desc {
+  font-size: 0.92rem;
+  color: #8b949e;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.zigzag-specs-cluster {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.spec-bubble {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.spec-bubble span {
+  display: block;
+  font-size: 0.65rem;
+  color: #8b949e;
+  letter-spacing: 0.05em;
+}
+
+.spec-bubble strong {
+  font-size: 0.88rem;
+  color: #ffffff;
+}
+
+.redesign-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #0d1117;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.redesign-primary-btn:hover {
+  background: #e09f3e;
+}
+
+/* Audit Summary Card */
+.redesign-audit-box-section {
+  padding: 20px 0 80px;
+}
+
+.audit-summary-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.audit-summary-card h3 {
+  font-size: 1.4rem;
+  margin: 0 0 28px;
+  color: #fff;
+}
+
+.summary-triad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.triad-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.triad-icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(224, 159, 62, 0.15);
+  color: #e09f3e;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.triad-item h4 {
+  font-size: 1rem;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.triad-item p {
+  font-size: 0.82rem;
+  color: #8b949e;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Footer */
+.redesign-footer {
+  border-top: 1px solid #21262d;
+  padding: 36px 0;
+}
+
+.footer-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: #8b949e;
+}
+
+.footer-split strong {
+  color: #fff;
+}
+
+.footer-split p {
+  margin: 2px 0 0;
+}
+
+.redesign-skill-credit {
+  text-align: right;
+}
+
+.redesign-skill-credit span {
+  font-family: monospace;
+  color: #e09f3e;
+  font-weight: 700;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .zigzag-card,
+  .zigzag-card.zigzag-reversed {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+  }
+  .zigzag-reversed .zigzag-media {
+    order: 0;
+  }
+  .summary-triad {
+    grid-template-columns: 1fr;
+  }
+  .footer-split {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .redesign-skill-credit {
+    text-align: center;
+  }
+}
