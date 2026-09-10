@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { ArrowRight, Compass, Eye, Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
 import './ModelTasteSkill.css';
 
@@ -125,7 +126,8 @@ export function ModelTasteSkill() {
 
                   <div className="prop-action-row">
                     <div className="price-display">{prop.priceLabel}</div>
-                    <a 
+                    <VerFichaLink id={prop.id} />
+                    <a
                       href={`https://wa.me/${prop.whatsapp}?text=Hola,%20quisiera%20recibir%20el%20dossier%20completo%20de:%20${encodeURIComponent(prop.title)}`}
                       target="_blank" 
                       rel="noreferrer" 

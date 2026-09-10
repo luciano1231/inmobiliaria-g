@@ -1,0 +1,17 @@
+.ver-ficha-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.85;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  transition: opacity 0.15s ease, gap 0.15s ease;
+}
+.ver-ficha-link:hover {
+  opacity: 1;
+  gap: 8px;
+}

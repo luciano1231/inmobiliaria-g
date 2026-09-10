@@ -11,8 +11,8 @@
   color: #2b2622;
 }
 .skill-map-section.tone-dark {
-  background: #0c0c0d;
-  color: #ededed;
+  background: #f3efe7;
+  color: #2b2622;
 }
 
 .skill-map-section__inner {
@@ -51,9 +51,6 @@
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.35);
-}
-.tone-dark .skill-map-section__frame {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 24px 60px -20px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 640px) {

@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { ArrowUpRight, MapPin } from 'lucide-react';
 import './ModelImageToCode.css';
 
@@ -81,6 +82,7 @@ export function ModelImageToCode() {
               </div>
 
               <div className="stage-actions">
+                <VerFichaLink id={activeProperty.id} label="Ver ficha completa" />
                 <a
                   href={`https://wa.me/${activeProperty.whatsapp}?text=${encodeURIComponent(`Hola, quiero más información sobre: ${activeProperty.title}`)}`}
                   target="_blank"

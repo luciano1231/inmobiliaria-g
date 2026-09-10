@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { ArrowUpRight, Compass, Sparkles, Star, MapPin, Eye } from 'lucide-react';
 import './ModelGptTaste.css';
 
@@ -120,7 +121,9 @@ export function ModelGptTaste() {
                       <span>{prop.bathrooms || 0} Baños</span>
                     </div>
 
-                    <a 
+                    <div className="bento-actions-row">
+                    <VerFichaLink id={prop.id} />
+                    <a
                       href={`https://wa.me/${prop.whatsapp}?text=Consulta%20por%20la%20propiedad:%20${encodeURIComponent(prop.title)}`}
                       target="_blank"
                       rel="noreferrer"
@@ -129,6 +132,7 @@ export function ModelGptTaste() {
                       <span>Ver detalles y coordinar visita</span>
                       <ArrowUpRight size={15} />
                     </a>
+                    </div>
                   </div>
                 </article>
               );

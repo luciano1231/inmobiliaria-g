@@ -1,6 +1,6 @@
 /* BRANDKIT GUIDELINES & IDENTITY BOARD STYLES */
 .brandkit-page {
-  background-color: #0f1013;
+  background-color: #f4f2ee;
   color: #e5ded6;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
@@ -20,8 +20,8 @@
 
 /* Base Presentation Board */
 .brandkit-board {
-  background: #17191e;
-  border: 1px solid #282b33;
+  background: #211c17;
+  border: 1px solid #e6e0d6;
   border-radius: 12px;
   padding: 36px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -31,13 +31,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #282b33;
+  border-bottom: 1px solid #e6e0d6;
   padding-bottom: 14px;
   margin-bottom: 28px;
   font-family: ui-monospace, SFMono-Regular, monospace;
   font-size: 0.72rem;
   letter-spacing: 0.08em;
-  color: #7d8594;
+  color: #6f6a62;
 }
 
 .deck-id {
@@ -56,7 +56,7 @@
 .brand-symbol-box {
   width: 90px;
   height: 90px;
-  background: #242c35;
+  background: #e6e0d6;
   border: 1px solid #c29b63;
   border-radius: 8px;
   display: flex;
@@ -76,7 +76,7 @@
 .brand-sub {
   font-size: 0.5rem;
   letter-spacing: 0.12em;
-  color: #a0aab8;
+  color: #6f6a62;
   margin-top: 4px;
 }
 
@@ -84,13 +84,13 @@
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 700;
   letter-spacing: -0.025em;
-  color: #ffffff;
+  color: #211c17;
   margin: 0 0 10px;
 }
 
 .brand-desc {
   font-size: 0.98rem;
-  color: #9da6b5;
+  color: #6f6a62;
   line-height: 1.6;
   max-width: 680px;
   margin: 0;
@@ -101,10 +101,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  background: #121316;
+  background: #211c17;
   padding: 16px;
   border-radius: 8px;
-  border: 1px solid #242830;
+  border: 1px solid #e6e0d6;
 }
 
 .color-swatch-item {
@@ -122,13 +122,13 @@
 
 .color-swatch-item strong {
   font-size: 0.78rem;
-  color: #ffffff;
+  color: #211c17;
 }
 
 .color-swatch-item small {
   font-family: monospace;
   font-size: 0.7rem;
-  color: #7d8594;
+  color: #6f6a62;
 }
 
 /* Assets Board */
@@ -140,9 +140,9 @@
 }
 
 .brand-tab {
-  background: #121316;
-  border: 1px solid #282b33;
-  color: #9da6b5;
+  background: #211c17;
+  border: 1px solid #e6e0d6;
+  color: #6f6a62;
   padding: 6px 14px;
   border-radius: 4px;
   font-size: 0.78rem;
@@ -152,13 +152,13 @@
 }
 
 .brand-tab:hover {
-  background: #242c35;
-  color: #fff;
+  background: #e6e0d6;
+  color: #211c17;
 }
 
 .brand-tab.active {
   background: #c29b63;
-  color: #121316;
+  color: #211c17;
   border-color: #c29b63;
   font-weight: 700;
 }
@@ -170,8 +170,8 @@
 }
 
 .brand-asset-card {
-  background: #131418;
-  border: 1px solid #282b33;
+  background: #211c17;
+  border: 1px solid #e6e0d6;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -182,13 +182,13 @@
   display: flex;
   justify-content: space-between;
   padding: 8px 12px;
-  background: #1b1e24;
+  background: #211c17;
   font-size: 0.68rem;
   font-family: monospace;
 }
 
 .asset-code {
-  color: #7d8594;
+  color: #6f6a62;
 }
 
 .asset-tag {
@@ -225,7 +225,7 @@
 
 .asset-loc {
   font-size: 0.72rem;
-  color: #7d8594;
+  color: #6f6a62;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -236,12 +236,12 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 6px;
-  color: #fff;
+  color: #211c17;
 }
 
 .asset-description {
   font-size: 0.78rem;
-  color: #8892a0;
+  color: #6f6a62;
   line-height: 1.45;
   margin: 0 0 14px;
   display: -webkit-box;
@@ -254,17 +254,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
-  background: #17191e;
+  background: #211c17;
   padding: 8px;
   border-radius: 4px;
-  border: 1px solid #242830;
+  border: 1px solid #e6e0d6;
   margin-bottom: 14px;
 }
 
 .asset-specs-grid label {
   display: block;
   font-size: 0.6rem;
-  color: #616b7b;
+  color: #6f6a62;
 }
 
 .asset-specs-grid strong {
@@ -281,8 +281,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #242c35;
-  color: #fff;
+  background: #e6e0d6;
+  color: #211c17;
   text-decoration: none;
   font-size: 0.75rem;
   font-weight: 600;
@@ -293,7 +293,7 @@
 
 .brand-card-cta:hover {
   background: #c29b63;
-  color: #121316;
+  color: #211c17;
 }
 
 /* Pillars Board */
@@ -304,7 +304,7 @@
 }
 
 .pillar-column {
-  border-left: 2px solid #282b33;
+  border-left: 2px solid #e6e0d6;
   padding-left: 20px;
 }
 
@@ -320,11 +320,11 @@
 .pillar-column h4 {
   font-size: 1.1rem;
   margin: 0 0 8px;
-  color: #fff;
+  color: #211c17;
 }
 
 .pillar-column p {
-  color: #8892a0;
+  color: #6f6a62;
   font-size: 0.85rem;
   line-height: 1.55;
   margin: 0;
@@ -336,11 +336,11 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.82rem;
-  color: #7d8594;
+  color: #6f6a62;
 }
 
 .footer-deck-flex strong {
-  color: #fff;
+  color: #211c17;
 }
 
 .footer-deck-flex p {
@@ -378,3 +378,22 @@
     text-align: center;
   }
 }
+
+.brand-card-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+/* ===== Corrección tema claro (Brandkit) ===== */
+.brandkit-page { color: #211c17; }
+.brandkit-page .brandkit-board { background: #ffffff; }
+.brandkit-page .board-header-panel { background: #f4f0e8; }
+.brandkit-page .brand-asset-card { background: #ffffff; }
+.brandkit-page .brand-h1,
+.brandkit-page .asset-title,
+.brandkit-page .deck-title { color: #211c17; }
+.brandkit-page .brand-card-cta { background: #211c17; color: #ffffff; }
+.brandkit-page .brand-monogram { background: #211c17; color: #ffffff; }

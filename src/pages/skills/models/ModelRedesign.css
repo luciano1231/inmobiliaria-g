@@ -1,7 +1,7 @@
 /* MODERN ARCHITECTURAL REDESIGN STYLES */
 .redesign-page {
-  background-color: #0d1117;
-  color: #e6edf3;
+  background-color: #f5f4f1;
+  color: #211c17;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -18,7 +18,7 @@
 /* Hero */
 .redesign-hero {
   padding: 60px 0 80px;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid #e5e0d7;
 }
 
 .audit-provenance-pill {
@@ -41,14 +41,14 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.035em;
-  color: #ffffff;
+  color: #211c17;
   max-width: 900px;
   margin: 0 0 20px;
 }
 
 .redesign-lead {
   font-size: 1.12rem;
-  color: #8b949e;
+  color: #6f6a62;
   max-width: 680px;
   margin: 0 0 40px;
   line-height: 1.65;
@@ -58,8 +58,8 @@
   display: inline-flex;
   align-items: center;
   gap: 32px;
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: #211c17;
+  border: 1px solid #e5e0d7;
   padding: 16px 28px;
   border-radius: 12px;
 }
@@ -68,18 +68,18 @@
   display: block;
   font-size: 1.6rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #211c17;
 }
 
 .stat-unit span {
   font-size: 0.75rem;
-  color: #8b949e;
+  color: #6f6a62;
 }
 
 .stat-divider {
   width: 1px;
   height: 36px;
-  background: #30363d;
+  background: #e5e0d7;
 }
 
 /* 2-Column Zig-Zag Layout */
@@ -109,7 +109,7 @@
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #211c17;
   margin: 0;
 }
 
@@ -119,9 +119,9 @@
 }
 
 .redesign-tab-btn {
-  background: #161b22;
-  border: 1px solid #30363d;
-  color: #8b949e;
+  background: #211c17;
+  border: 1px solid #e5e0d7;
+  color: #6f6a62;
   font-family: inherit;
   font-size: 0.8rem;
   font-weight: 500;
@@ -132,13 +132,13 @@
 }
 
 .redesign-tab-btn:hover {
-  color: #ffffff;
-  border-color: #8b949e;
+  color: #211c17;
+  border-color: #6f6a62;
 }
 
 .redesign-tab-btn.active {
   background: #e09f3e;
-  color: #0d1117;
+  color: #f5f4f1;
   border-color: #e09f3e;
   font-weight: 700;
 }
@@ -154,8 +154,8 @@
   grid-template-columns: 1fr 1.15fr;
   gap: 48px;
   align-items: center;
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: #211c17;
+  border: 1px solid #e5e0d7;
   border-radius: 16px;
   padding: 32px;
   transition: border-color 0.2s, transform 0.2s;
@@ -199,7 +199,7 @@
   background: rgba(13, 17, 23, 0.85);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  color: #211c17;
   font-size: 0.72rem;
   font-weight: 600;
   padding: 4px 10px;
@@ -211,7 +211,7 @@
   bottom: 14px;
   left: 14px;
   background: #e09f3e;
-  color: #0d1117;
+  color: #f5f4f1;
   font-size: 1.05rem;
   font-weight: 800;
   padding: 6px 14px;
@@ -228,7 +228,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.82rem;
-  color: #8b949e;
+  color: #6f6a62;
   margin-bottom: 8px;
 }
 
@@ -236,13 +236,13 @@
   font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #211c17;
   margin: 0 0 10px;
 }
 
 .zigzag-desc {
   font-size: 0.92rem;
-  color: #8b949e;
+  color: #6f6a62;
   line-height: 1.6;
   margin: 0 0 24px;
 }
@@ -255,8 +255,8 @@
 }
 
 .spec-bubble {
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: #f5f4f1;
+  border: 1px solid #e5e0d7;
   padding: 10px;
   border-radius: 8px;
 }
@@ -264,21 +264,21 @@
 .spec-bubble span {
   display: block;
   font-size: 0.65rem;
-  color: #8b949e;
+  color: #6f6a62;
   letter-spacing: 0.05em;
 }
 
 .spec-bubble strong {
   font-size: 0.88rem;
-  color: #ffffff;
+  color: #211c17;
 }
 
 .redesign-primary-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
-  color: #0d1117;
+  background: #211c17;
+  color: #f5f4f1;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 700;
@@ -297,8 +297,8 @@
 }
 
 .audit-summary-card {
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: #211c17;
+  border: 1px solid #e5e0d7;
   border-radius: 16px;
   padding: 40px;
 }
@@ -306,7 +306,7 @@
 .audit-summary-card h3 {
   font-size: 1.4rem;
   margin: 0 0 28px;
-  color: #fff;
+  color: #211c17;
 }
 
 .summary-triad {
@@ -335,19 +335,19 @@
 .triad-item h4 {
   font-size: 1rem;
   margin: 0 0 6px;
-  color: #fff;
+  color: #211c17;
 }
 
 .triad-item p {
   font-size: 0.82rem;
-  color: #8b949e;
+  color: #6f6a62;
   line-height: 1.5;
   margin: 0;
 }
 
 /* Footer */
 .redesign-footer {
-  border-top: 1px solid #21262d;
+  border-top: 1px solid #e5e0d7;
   padding: 36px 0;
 }
 
@@ -356,11 +356,11 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.82rem;
-  color: #8b949e;
+  color: #6f6a62;
 }
 
 .footer-split strong {
-  color: #fff;
+  color: #211c17;
 }
 
 .footer-split p {
@@ -400,3 +400,20 @@
     text-align: center;
   }
 }
+
+.zigzag-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ===== Corrección tema claro (Redesign) ===== */
+.redesign-page { color: #211c17; }
+.redesign-page .redesign-primary-btn { background: #211c17; color: #ffffff; }
+.redesign-page .zigzag-card,
+.redesign-page .audit-summary-card,
+.redesign-page .redesign-hero { background: #ffffff; }
+.redesign-page .redesign-h1,
+.redesign-page .zigzag-title,
+.redesign-page .section-title-clean { color: #211c17; }

@@ -24,8 +24,10 @@ export function SkillMapSection({
   title = 'Explorá las propiedades en el mapa',
   note = 'Cada punto es una propiedad real en Corrientes y localidades cercanas. Tocá un marcador para ver el detalle.',
 }) {
+  // Todos los mapas en tono claro: 'dark' se degrada a 'cream'.
+  const safeTone = tone === 'dark' ? 'cream' : tone;
   return (
-    <section className={`skill-map-section tone-${tone}`}>
+    <section className={`skill-map-section tone-${safeTone}`}>
       <div className="skill-map-section__inner">
         <div className="skill-map-section__head">
           <span className="skill-map-section__label">{label}</span>

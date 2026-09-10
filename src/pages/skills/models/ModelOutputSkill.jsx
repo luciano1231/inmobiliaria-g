@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { Table, CheckCircle2, ArrowUpRight, FileSpreadsheet, ShieldAlert, Sparkles } from 'lucide-react';
 import './ModelOutputSkill.css';
 
@@ -128,13 +129,14 @@ export function ModelOutputSkill() {
                 </div>
 
                 <div className="report-actions">
-                  <a 
+                  <VerFichaLink id={selectedProp.id} label="Abrir ficha completa" />
+                  <a
                     href={`https://wa.me/${selectedProp.whatsapp}?text=Deseo%20el%20informe%20exhaustivo%20de%20la%20propiedad%20${selectedProp.id}`}
                     target="_blank"
                     rel="noreferrer"
                     className="report-dispatch-btn"
                   >
-                    Solicitar Expediente Completo por WhatsApp
+                    Consultar por WhatsApp
                   </a>
                 </div>
               </div>

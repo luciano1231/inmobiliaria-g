@@ -12,12 +12,9 @@
   font-family: inherit;
 }
 
-/* Variantes de teñido del mapa */
+/* Todas las variantes se muestran claras */
 .skillmap--mono .leaflet-tile-pane {
-  filter: grayscale(1) contrast(1.05);
-}
-.skillmap--blueprint .leaflet-tile-pane {
-  filter: grayscale(1) invert(0.92) hue-rotate(180deg) brightness(0.85) contrast(1.1) saturate(2.2);
+  filter: saturate(0.9);
 }
 
 /* Marcadores */
@@ -33,11 +30,6 @@
   background: var(--pin, #2563eb);
   border: 3px solid #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-}
-.skillmap--dark .skillmap-pin,
-.skillmap--blueprint .skillmap-pin {
-  border-color: #0b0b0b;
-  box-shadow: 0 0 0 1px var(--pin, #2563eb), 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Popup */
@@ -77,7 +69,14 @@
 }
 .skillmap-popup__price {
   display: block;
-  padding: 0 12px 10px;
+  padding: 0 12px 4px;
   font-weight: 700;
   color: #0f172a;
+}
+.skillmap-popup__link {
+  display: block;
+  padding: 0 12px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2563eb;
 }

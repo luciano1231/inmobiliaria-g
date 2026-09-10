@@ -7,12 +7,12 @@ import './SkillMap.css';
 
 const CAPITAL_CENTER = [-27.4692, -58.8306];
 
-const TILES = {
-  light: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-  dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-  mono: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-  blueprint: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-};
+// Basemap claro sin API key (Esri World Light Gray Canvas).
+const BASE_URL =
+  'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+const LABELS_URL =
+  'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}';
+const ATTR = 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors';
 
 function pinIcon(accent) {
   return L.divIcon({
@@ -41,22 +41,22 @@ function FitBounds({ points }) {
 }
 
 /**
- * Mapa Leaflet reutilizable y temeable para los modelos de skills.
+ * Mapa Leaflet reutilizable. Siempre en tono claro.
  * props:
  *  - properties: array (usa .coordinates [lat,lng], .images, .title, .priceLabel, .operation, .id)
- *  - variant: 'light' | 'dark' | 'mono' | 'blueprint'
  *  - accent: color de los marcadores (hex)
  *  - height: alto del mapa (default 420px)
- *  - className: para theming extra por modelo
+ *  - className: theming extra por modelo
  *  - zoomControl: boolean (default true)
+ *  - variant: se acepta por compatibilidad; siempre se renderiza claro.
  */
 export function SkillMap({
   properties = [],
-  variant = 'light',
   accent = '#2563eb',
   height = '420px',
   className = '',
   zoomControl = true,
+  variant = 'light',
 }) {
   const pts = useMemo(
     () => properties.filter((p) => Array.isArray(p.coordinates)).map((p) => p.coordinates),
@@ -65,10 +65,7 @@ export function SkillMap({
   const icon = useMemo(() => pinIcon(accent), [accent]);
 
   return (
-    <div
-      className={`skillmap skillmap--${variant} ${className}`}
-      style={{ height }}
-    >
+    <div className={`skillmap skillmap--${variant} ${className}`} style={{ height }}>
       <MapContainer
         center={CAPITAL_CENTER}
         zoom={11}
@@ -76,10 +73,8 @@ export function SkillMap({
         scrollWheelZoom={false}
         style={{ height: '100%', width: '100%' }}
       >
-        <TileLayer
-          url={TILES[variant] || TILES.light}
-          attribution='&copy; OpenStreetMap &copy; CARTO'
-        />
+        <TileLayer url={BASE_URL} attribution={ATTR} maxZoom={16} />
+        <TileLayer url={LABELS_URL} maxZoom={16} />
         <FitBounds points={pts} />
         {properties.map((p) =>
           Array.isArray(p.coordinates) ? (
@@ -90,6 +85,7 @@ export function SkillMap({
                   <span className="skillmap-popup__op">{p.operation} · {p.city}</span>
                   <strong className="skillmap-popup__title">{p.title}</strong>
                   <span className="skillmap-popup__price">{p.priceLabel}</span>
+                  <span className="skillmap-popup__link">Ver ficha completa &rarr;</span>
                 </Link>
               </Popup>
             </Marker>

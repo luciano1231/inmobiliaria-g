@@ -8,158 +8,203 @@ import './SkillsHub.css';
 
 export const SKILL_MODELS_DATA = [
   {
-    id: 'brutalist-skill',
-    name: 'brutalist-skill',
-    title: 'Industrial Brutalism & Tactical Telemetry',
-    category: 'Industriales & Técnicos',
-    badge: 'Swiss Blueprint • CRT Dark',
-    desc: 'Bordes rígidos a 90°, telemetría de datos monospaced, acento rojo aviación (#E61919), encuadres ASCII y cero border-radius.',
-    img: '/inmobiliaria-g/images/small-figurine-blueprint.jpg',
-    route: '/skills/brutalist-skill',
-    traits: ['90° Sharp Corners', 'JetBrains Mono', 'Aviation Red #E61919', 'ASCII Framing']
+    id: 'extra-aurora',
+    name: 'extra-aurora',
+    title: 'Aurora · Editorial cálido',
+    category: 'Extra (recomendados)',
+    badge: 'Crema · serif · foto grande',
+    desc: 'Paleta cálida en crema con títulos serif y una grilla tipo bento donde la primera propiedad ocupa el doble de ancho. Fotos protagonistas.',
+    img: '/inmobiliaria-g/images/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg',
+    route: '/skills/extra-aurora',
+    traits: ['Fondo crema', 'Títulos serif', 'Grilla bento', 'Fichas con flechas'],
+  },
+  {
+    id: 'extra-signature',
+    name: 'extra-signature',
+    title: 'Signature · Agencia premium',
+    category: 'Extra (recomendados)',
+    badge: 'Azul · hero dividido · aire',
+    desc: 'Layout dividido con texto a la izquierda y foto grande a la derecha, mucho espacio en blanco y tarjetas de tres columnas. Tono azul sobrio.',
+    img: '/inmobiliaria-g/images/arquitectura-moderna-apartamentos_1268-14696.avif',
+    route: '/skills/extra-signature',
+    traits: ['Hero dividido', 'Azul #1F4B8E', 'Tarjetas 3 col', 'Mucho aire'],
+  },
+  {
+    id: 'extra-galeria',
+    name: 'extra-galeria',
+    title: 'Galería · Revista de arquitectura',
+    category: 'Extra (recomendados)',
+    badge: 'Blanco · filas alternadas',
+    desc: 'Cada propiedad como una pieza de revista: foto amplia a un lado y ficha al otro, alternando el lado en cada fila. Acentos dorados.',
+    img: '/inmobiliaria-g/images/Edificio-en-Libertad-171-Tucuman-11-730x1024.jpg',
+    route: '/skills/extra-galeria',
+    traits: ['Filas alternadas', 'Serif display', 'Dorado #A9803F', 'Foto grande'],
+  },
+  {
+    id: 'extra-panorama',
+    name: 'extra-panorama',
+    title: 'Panorama · El mapa primero',
+    category: 'Extra (recomendados)',
+    badge: 'Verde · mapa en el hero',
+    desc: 'El mapa aparece en la parte superior, junto al título, y debajo se despliega el catálogo en tarjetas compactas. Ideal para buscar por zona.',
+    img: '/inmobiliaria-g/images/house-isolated-field.jpg',
+    route: '/skills/extra-panorama',
+    traits: ['Mapa en el hero', 'Verde #2F7D5D', 'Tarjetas compactas', 'Buscar por zona'],
+  },
+  {
+    id: 'extra-vitrina',
+    name: 'extra-vitrina',
+    title: 'Vitrina · Catálogo denso',
+    category: 'Extra (recomendados)',
+    badge: 'Rústico · grilla densa',
+    desc: 'Barra de filtros rápidos y una grilla de tarjetas chicas de 4 a 5 columnas para ver muchas propiedades de un vistazo.',
+    img: '/inmobiliaria-g/images/front-door-house.jpg',
+    route: '/skills/extra-vitrina',
+    traits: ['Grilla densa', 'Filtros rápidos', 'Terracota #B5482F', 'Muchas fichas'],
   },
   {
     id: 'minimalist-skill',
     name: 'minimalist-skill',
-    title: 'Premium Utilitarian Minimalism',
+    title: 'Minimalista editorial',
     category: 'Editoriales & Minimalistas',
-    badge: 'Warm Bone • Serif Editorial',
-    desc: 'Lienzo cálido hueso (#F7F6F3), tipografía serif de alta jerarquía, cuadrícula bento plana con 1px de borde, pasteles desaturados y cero sombras duras.',
+    badge: 'Hueso cálido · serif',
+    desc: 'Fondo hueso cálido, tipografía serif de alta jerarquía, cuadrícula bento plana de 1px y acentos pastel muy suaves. Sin sombras duras.',
     img: '/inmobiliaria-g/images/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg',
     route: '/skills/minimalist-skill',
-    traits: ['Warm Bone #F7F6F3', 'Editorial Serif', '1px #EAEAEA Bento', 'Zero Shadow']
+    traits: ['Fondo hueso', 'Serif editorial', 'Bento 1px', 'Pasteles suaves'],
   },
   {
     id: 'soft-skill',
     name: 'soft-skill',
-    title: 'High-End Visual Design ($150k Agency)',
+    title: 'Alta gama tipo agencia',
     category: 'Alta Gama & Agency',
-    badge: 'Apple / Linear Tier • Doppelrand',
-    desc: 'Arquitectura "Double-Bezel" (doppelrand anidado), botones con ícono anidado (button-in-button), navbar isla flotante y ritmo espacial generoso.',
+    badge: 'Tarjetas con doble marco',
+    desc: 'Tarjetas con contenedor doble (marco dentro de marco), navbar tipo isla flotante y ritmo espacial generoso. Estética de estudio premium.',
     img: '/inmobiliaria-g/images/arquitectura-moderna-apartamentos_1268-14696.avif',
     route: '/skills/soft-skill',
-    traits: ['Double-Bezel Nested', 'Button-in-Button', 'Floating Pill Nav', 'Deep Luxury']
+    traits: ['Doble marco', 'Nav flotante', 'Mucho espacio', 'Estética premium'],
   },
   {
     id: 'stitch-skill',
     name: 'stitch-skill',
-    title: 'Stitch Design Taste (Semantic DS)',
+    title: 'Neutros con acento',
     category: 'Alta Gama & Agency',
-    badge: 'Zinc Neutrals • Electric Teal',
-    desc: 'Base neutrales Zinc, acento singular de alto contraste, tipografía track-tight, hero asimétrico dividido y físicas spring.',
+    badge: 'Grises neutros · hero dividido',
+    desc: 'Base de grises neutros con un único acento de alto contraste, tipografía ajustada y hero asimétrico dividido con buscador.',
     img: '/inmobiliaria-g/images/front-door-house.jpg',
     route: '/skills/stitch-skill',
-    traits: ['Zinc-950 Base', 'Cyan Accent', 'Asymmetric Split Hero', 'Inline Photo Tag']
+    traits: ['Grises neutros', 'Hero dividido', 'Buscador', 'Un solo acento'],
   },
   {
     id: 'gpt-tasteskill',
     name: 'gpt-tasteskill',
-    title: 'Elite UX/UI & Motion (Awwwards-Tier)',
+    title: 'Bento cinematográfico',
     category: 'Alta Gama & Agency',
-    badge: 'AIDA Framework • Gapless Bento',
-    desc: 'Hero amplio de 2 líneas garantizadas con micro-fotos tipográficas inline, cuadrícula bento sin espacios muertos (grid-flow-dense) y capítulos cinematográficos.',
+    badge: 'Hero ancho · bento compacto',
+    desc: 'Hero ancho de dos líneas con micro-foto dentro del título y una grilla bento sin espacios muertos. Secciones amplias y aireadas.',
     img: '/inmobiliaria-g/images/beautiful-shot-white-building-hamilton-gardens-new-zealand-blue-sky.jpg',
     route: '/skills/gpt-tasteskill',
-    traits: ['2-Line Wide Hero', 'Dense Gapless Bento', 'Inline Heading Photos', 'AIDA Structure']
+    traits: ['Hero ancho', 'Bento compacto', 'Foto en el título', 'Secciones amplias'],
   },
   {
     id: 'taste-skill',
     name: 'taste-skill',
-    title: 'Anti-Slop Modern Creative',
+    title: 'Neo-editorial asimétrico',
     category: 'Editoriales & Minimalistas',
-    badge: 'Neo-Editorial • Dials 8 / 6 / 4',
-    desc: 'Diseño no-plantillero con alta varianza, flujo alternado asimétrico, tipografía con carácter y auditoría de habitabilidad genuina.',
+    badge: 'Filas alternadas · carácter',
+    desc: 'Composición no plantillera con flujo alternado asimétrico, tipografía con carácter y foco en la calidad de las fichas.',
     img: '/inmobiliaria-g/images/Edificio-en-Libertad-171-Tucuman-11-730x1024.jpg',
     route: '/skills/taste-skill',
-    traits: ['Variance 8 / Motion 6', 'Anti-Slop Layout', 'Alternating Stream', 'Dossier Action']
+    traits: ['Flujo alternado', 'Tipografía fuerte', 'Fichas curadas', 'Asimetría'],
   },
   {
     id: 'brandkit',
     name: 'brandkit',
-    title: 'Brand Guidelines & Identity Hub',
+    title: 'Manual de marca',
     category: 'Industriales & Técnicos',
-    badge: 'Charcoal Presentation Board',
-    desc: 'Lienzo charcoal oscuro, paneles de especificación de identidad, taxonomía de color de la marca, principios de solidez notarial y activos aplicados.',
+    badge: 'Paneles tipo deck de marca',
+    desc: 'Presentación en paneles tipo manual de identidad: taxonomía de color, monograma, pilares de la marca y el portafolio como aplicación.',
     img: '/inmobiliaria-g/images/DSC_0453-Editar-Editar.webp',
     route: '/skills/brandkit',
-    traits: ['Charcoal Boards', 'Color Taxonomy Chips', 'Logo System', 'Strategic Pillars']
+    traits: ['Paneles de marca', 'Chips de color', 'Monograma', 'Pilares'],
   },
   {
     id: 'redesign-skill',
     name: 'redesign-skill',
-    title: 'Modern Architectural Redesign',
+    title: 'Rediseño zig-zag',
     category: 'Alta Gama & Agency',
-    badge: 'Audit-First • 2-Column Zig-Zag',
-    desc: 'Reemplazo de la típica fila de 3 tarjetas iguales por un layout zig-zag de 2 columnas con ritmo visual equilibrado, sombra teñida y acentos ámbar sobrios.',
+    badge: '2 columnas · ritmo alternado',
+    desc: 'Sustituye la típica fila de tres tarjetas iguales por un layout zig-zag de dos columnas con ritmo visual equilibrado y acentos ámbar.',
     img: '/inmobiliaria-g/images/house-isolated-field.jpg',
     route: '/skills/redesign-skill',
-    traits: ['2-Col Zig-Zag', 'Anti-Pattern Fix', 'Negative Tracking', 'Amber Ochre #E09F3E']
+    traits: ['Zig-zag 2 col', 'Ritmo alternado', 'Ámbar sobrio', 'Fichas grandes'],
   },
   {
     id: 'imagegen-frontend-mobile',
     name: 'imagegen-frontend-mobile',
-    title: 'Native Mobile App Simulator',
+    title: 'App móvil (demo)',
     category: 'Mobile & Media',
-    badge: 'Interactive iPhone Mockup',
-    desc: 'Simulador táctil interactivo enmarcado en un iPhone con Dynamic Island, safe-area, tabs de navegación inferior, feed swipeable y vista de mapa.',
+    badge: 'Maqueta de teléfono interactiva',
+    desc: 'Simulador dentro de un teléfono: buscador, feed de propiedades, favoritos, pestañas inferiores y una vista de mapa real.',
     img: '/inmobiliaria-g/images/102974-el-ipv-sorteara-466-departamentos-en-capital-y-se-podra-ver-en-vivo.webp',
     route: '/skills/imagegen-frontend-mobile',
-    traits: ['iPhone Hardware Frame', 'Bottom Tab Nav', 'Safe Area', 'Touch Targets 44px']
+    traits: ['Maqueta de teléfono', 'Feed de propiedades', 'Favoritos', 'Mapa dentro'],
   },
   {
     id: 'imagegen-frontend-web',
     name: 'imagegen-frontend-web',
-    title: 'Section-by-Section Narrative Web',
+    title: 'Narrativa por capítulos',
     category: 'Mobile & Media',
-    badge: 'Horizontal Visual Chapters',
-    desc: 'Narrativa visual capítulo por capítulo con escalas de hero variables (horizonte litoral, foco arquitectónico, retiro ribereño y epílogo patrimonial).',
+    badge: 'Secciones a pantalla completa',
+    desc: 'La página avanza como una historia por capítulos, con heros de distinta escala y fotografía a pantalla completa, y un catálogo al final.',
     img: '/inmobiliaria-g/images/vacation-mykonos-travel-tourism-village.jpg',
     route: '/skills/imagegen-frontend-web',
-    traits: ['1 Story per Section', 'Grand Horizon Hero', 'Varied Scale', 'Storytelling Flow']
+    traits: ['Capítulos', 'Fotos a pantalla completa', 'Escalas variadas', 'Catálogo final'],
   },
   {
     id: 'image-to-code-skill',
     name: 'image-to-code-skill',
-    title: 'Image-to-Code Visual Fidelity',
+    title: 'Ficha protagonista + catálogo',
     category: 'Industriales & Técnicos',
-    badge: 'Pixel Fidelity • Spec Tokens',
-    desc: 'Composición dual arte-render y datos técnicos, panel de tokens JSON inspectables y selector dinámico de propiedades para renderizado visual.',
+    badge: 'Foto grande · grilla filtrable',
+    desc: 'Una propiedad activa se muestra en grande con su ficha, y debajo el catálogo completo en grilla filtrable por tipo. Estilo editorial oscuro-suave.',
     img: '/inmobiliaria-g/images/disenos.departamentos.software.1.jpg',
     route: '/skills/image-to-code-skill',
-    traits: ['High Fidelity Render', 'JSON Spec Inspector', 'Dual Hero Stage', 'Interactive Track']
+    traits: ['Propiedad en grande', 'Grilla filtrable', 'Editorial', 'Selección activa'],
   },
   {
     id: 'taste-skill-v1',
     name: 'taste-skill-v1',
-    title: 'Taste-Skill v1 Original',
+    title: 'Editorial crudo de alto impacto',
     category: 'Editoriales & Minimalistas',
-    badge: 'Vintage Anti-Slop Classic',
-    desc: 'La primera generación del movimiento anti-slop: titulares masivos, alto contraste con acentos amarillos, sombras sólidas de 6px y estética cruda.',
+    badge: 'Titulares grandes · alto contraste',
+    desc: 'Titulares enormes, alto contraste y tarjetas con sombras sólidas. Estética cruda y directa.',
     img: '/inmobiliaria-g/images/post-image-6c7e19a2-b479-46a7-ae67-74cc78d87422-0-1778780777807.jpg',
     route: '/skills/taste-skill-v1',
-    traits: ['Massive Impact Type', 'Solid 6px Box Shadow', 'Raw Energy', 'Amber Highlight']
+    traits: ['Titulares enormes', 'Alto contraste', 'Sombras sólidas', 'Directo'],
   },
   {
     id: 'output-skill',
     name: 'output-skill',
-    title: 'Full-Output Exhaustive Matrix',
+    title: 'Tabla comparativa completa',
     category: 'Industriales & Técnicos',
-    badge: 'Zero Truncation Data Matrix',
-    desc: 'Tabla comparativa completa sin registros omitidos ni filtros recortados, con desglose analítico en profundidad de cada unidad de la base de datos.',
+    badge: 'Todo el catálogo en una tabla',
+    desc: 'Todas las propiedades en una tabla comparativa con metros, ambientes, cochera, operación y valor. Al hacer clic en una fila se abre su ficha ampliada.',
     img: '/inmobiliaria-g/images/house-key-calculator-with-dollar-bills.jpg',
     route: '/skills/output-skill',
-    traits: ['Full Dataset Matrix', 'Tabular Numbers', 'Zero Truncation', 'Deep Inspector']
-  }
+    traits: ['Tabla completa', 'Números tabulares', 'Ficha por fila', 'Comparar'],
+  },
 ];
 
 export function SkillsHub() {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
 
   const categories = [
-    'Todos', 
-    'Alta Gama & Agency', 
-    'Editoriales & Minimalistas', 
-    'Industriales & Técnicos', 
+    'Todos',
+    'Extra (recomendados)',
+    'Alta Gama & Agency',
+    'Editoriales & Minimalistas',
+    'Industriales & Técnicos',
     'Mobile & Media'
   ];
 
@@ -174,11 +219,11 @@ export function SkillsHub() {
         <div className="hub-container hub-header-flex">
           <Link to="/" className="hub-back-btn">
             <ArrowLeft size={16} />
-            <span>Volver a la Landing Original</span>
+            <span>Volver al inicio</span>
           </Link>
           <div className="hub-pill-tag">
             <Sparkles size={14} className="sparkle-amber" />
-            <span>Agent Skills Lab • 13 Diseños Exclusivos</span>
+            <span>{SKILL_MODELS_DATA.length} modelos de diseño</span>
           </div>
         </div>
       </header>
@@ -186,12 +231,14 @@ export function SkillsHub() {
       {/* HERO SECTION */}
       <section className="hub-hero">
         <div className="hub-container">
-          <span className="hub-kicker">SUITE DE MODELOS (.agent/skills)</span>
+          <span className="hub-kicker">MODELOS DE DISEÑO</span>
           <h1 className="hub-title">
-            Un diseño de Landing Page por cada Skill instalada.
+            Elegí el diseño de página para tu inmobiliaria.
           </h1>
           <p className="hub-subtitle">
-            Cada modelo ha sido construido respetando exhaustivamente las directivas estéticas, tipográficas y de layout de su respectiva skill en <code className="hub-code">.agent/skills/</code>. Comparten el catálogo inmobiliario de Corrientes, pero cada uno ofrece una experiencia radicalmente diferente.
+            Todos los modelos comparten el mismo catálogo de propiedades de Corrientes y alrededores,
+            el mismo mapa y el mismo sistema de filtros. Cada uno propone una estética y un layout
+            distintos. Empezá por los <strong>Extra</strong>, que combinan lo mejor de los demás.
           </p>
 
           {/* CATEGORY FILTER CHIPS */}
@@ -256,10 +303,10 @@ export function SkillsHub() {
         <div className="hub-container footer-content-row">
           <div>
             <strong>Inmobiliaria G • Luciano Gonzalez Jensen</strong>
-            <p>Laboratorio de Diseño y Modelos de Landing Pages por Skills</p>
+            <p>Corrientes, Argentina · Casas, departamentos y lotes</p>
           </div>
           <div className="hub-footer-links">
-            <Link to="/" className="btn-secondary-link">Landing Original (3 Modelos)</Link>
+            <Link to="/" className="btn-secondary-link">Ir al inicio</Link>
             <a href="https://wa.me/5493794675203" target="_blank" rel="noreferrer" className="btn-contact-link">
               Contacto WhatsApp: 3794675203
             </a>

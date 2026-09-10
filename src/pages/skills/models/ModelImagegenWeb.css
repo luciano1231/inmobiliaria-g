@@ -1,7 +1,7 @@
 /* SECTION-BY-SECTION NARRATIVE WEB STYLES */
 .web-narrative-page {
-  background-color: #0f1115;
-  color: #1e293b;
+  background-color: #f6f5f2;
+  color: #e5e1d8;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -54,8 +54,8 @@
 }
 
 .dark-badge {
-  background: #f1f5f9;
-  border-color: #e2e8f0;
+  background: #1c2430;
+  border-color: #e5e1d8;
   color: #0f172a;
 }
 
@@ -70,7 +70,7 @@
 
 .chapter-lead {
   font-size: 1.2rem;
-  color: #e2e8f0;
+  color: #e5e1d8;
   max-width: 650px;
   margin: 0 0 36px;
   line-height: 1.6;
@@ -88,7 +88,7 @@
   align-items: center;
   gap: 8px;
   background: #ffffff;
-  color: #0f1721;
+  color: #f6f5f2;
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 700;
@@ -102,7 +102,7 @@
 }
 
 .chapter-scroll-hint {
-  color: #94a3b8;
+  color: #6b7280;
   font-size: 0.82rem;
 }
 
@@ -164,13 +164,13 @@
   align-items: center;
   gap: 6px;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #6b7280;
   margin: 0 0 18px;
 }
 
 .chapter-body {
   font-size: 1rem;
-  color: #475569;
+  color: #6b7280;
   line-height: 1.65;
   margin: 0 0 28px;
 }
@@ -180,7 +180,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e5e1d8;
   padding: 16px;
   border-radius: 10px;
   margin-bottom: 28px;
@@ -194,7 +194,7 @@
 
 .chapter-specs-grid span {
   font-size: 0.75rem;
-  color: #64748b;
+  color: #6b7280;
 }
 
 .chapter-price-row {
@@ -222,7 +222,7 @@
 }
 
 .btn-narrative-dark:hover {
-  background: #1e293b;
+  background: #e5e1d8;
 }
 
 /* Chapter 3: Ribereño Retreat */
@@ -251,7 +251,7 @@
 }
 
 .text-light {
-  color: #cbd5e1 !important;
+  color: #6b7280 !important;
 }
 
 .retreat-specs-card {
@@ -271,7 +271,7 @@
 .retreat-specs-card span {
   display: block;
   font-size: 0.68rem;
-  color: #94a3b8;
+  color: #6b7280;
   letter-spacing: 0.05em;
 }
 
@@ -302,11 +302,11 @@
 /* Catálogo completo */
 .chapter-catalog {
   background: #0f172a;
-  color: #e2e8f0;
+  color: #e5e1d8;
   padding: 100px 0;
 }
 .chapter-catalog .chapter-h2 { color: #fff; }
-.chapter-catalog .chapter-body { color: #94a3b8; margin-bottom: 40px; }
+.chapter-catalog .chapter-body { color: #6b7280; margin-bottom: 40px; }
 
 .narrative-catalog-grid {
   display: grid;
@@ -315,8 +315,8 @@
 }
 
 .narrative-cat-card {
-  background: #131c2e;
-  border: 1px solid #24314a;
+  background: #f6f5f2;
+  border: 1px solid #e5e1d8;
   border-radius: 14px;
   overflow: hidden;
   display: flex;
@@ -345,7 +345,7 @@
 }
 .narrative-cat-loc {
   font-size: 0.82rem;
-  color: #94a3b8;
+  color: #6b7280;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -375,7 +375,7 @@
   gap: 10px;
   margin-bottom: 28px;
   font-size: 0.92rem;
-  color: #334155;
+  color: #e5e1d8;
   font-weight: 600;
 }
 
@@ -392,9 +392,9 @@
 /* Chapter 5: Epilogue */
 .chapter-epilogue {
   background: #0f172a;
-  color: #94a3b8;
+  color: #6b7280;
   padding: 60px 0;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #e5e1d8;
 }
 
 .epilogue-content {
@@ -442,3 +442,16 @@
     text-align: center;
   }
 }
+
+/* ===== Corrección tema claro (ImagegenWeb) ===== */
+.web-narrative-page { color: #23201b; }
+.web-narrative-page .btn-narrative-solid { background: #23201b; color: #ffffff; }
+.web-narrative-page .btn-narrative-dark { background: #23201b; color: #ffffff; }
+.web-narrative-page .btn-narrative-dark:hover { background: #3c372f; }
+.web-narrative-page .dark-badge { background: #23201b; border-color: #23201b; color: #ffffff; }
+.web-narrative-page .chapter-catalog { background: #f0ece3; color: #23201b; }
+.web-narrative-page .chapter-catalog .chapter-h2,
+.web-narrative-page .narrative-cat-body h3,
+.web-narrative-page .narrative-cat-foot strong { color: #23201b; }
+.web-narrative-page .narrative-cat-card { background: #ffffff; }
+.web-narrative-page .text-light { color: #e8e4da !important; }

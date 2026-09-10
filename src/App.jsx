@@ -11,7 +11,6 @@ import { Model3 } from './pages/Model3';
 
 // SKILLS LAB & MODELS IMPORTS
 import { SkillsHub } from './pages/skills/SkillsHub';
-import { ModelBrutalist } from './pages/skills/models/ModelBrutalist';
 import { ModelMinimalist } from './pages/skills/models/ModelMinimalist';
 import { ModelSoftSkill } from './pages/skills/models/ModelSoftSkill';
 import { ModelStitch } from './pages/skills/models/ModelStitch';
@@ -24,6 +23,11 @@ import { ModelImagegenWeb } from './pages/skills/models/ModelImagegenWeb';
 import { ModelImageToCode } from './pages/skills/models/ModelImageToCode';
 import { ModelTasteSkillV1 } from './pages/skills/models/ModelTasteSkillV1';
 import { ModelOutputSkill } from './pages/skills/models/ModelOutputSkill';
+import { ModelExtraAurora } from './pages/skills/models/ModelExtraAurora';
+import { ModelExtraSignature } from './pages/skills/models/ModelExtraSignature';
+import { ModelExtraGaleria } from './pages/skills/models/ModelExtraGaleria';
+import { ModelExtraPanorama } from './pages/skills/models/ModelExtraPanorama';
+import { ModelExtraVitrina } from './pages/skills/models/ModelExtraVitrina';
 
 import './index.css';
 
@@ -52,8 +56,7 @@ function AppContent() {
           {/* HUB CENTRAL DE SKILLS */}
           <Route path="/skills" element={<SkillsHub />} />
 
-          {/* 13 MODELOS DE SKILLS */}
-          <Route path="/skills/brutalist-skill" element={<ModelBrutalist />} />
+          {/* MODELOS DE SKILLS */}
           <Route path="/skills/minimalist-skill" element={<ModelMinimalist />} />
           <Route path="/skills/soft-skill" element={<ModelSoftSkill />} />
           <Route path="/skills/stitch-skill" element={<ModelStitch />} />
@@ -66,6 +69,13 @@ function AppContent() {
           <Route path="/skills/image-to-code-skill" element={<ModelImageToCode />} />
           <Route path="/skills/taste-skill-v1" element={<ModelTasteSkillV1 />} />
           <Route path="/skills/output-skill" element={<ModelOutputSkill />} />
+
+          {/* 5 MODELOS EXTRA (lo mejor de los demás, en tonos claros) */}
+          <Route path="/skills/extra-aurora" element={<ModelExtraAurora />} />
+          <Route path="/skills/extra-signature" element={<ModelExtraSignature />} />
+          <Route path="/skills/extra-galeria" element={<ModelExtraGaleria />} />
+          <Route path="/skills/extra-panorama" element={<ModelExtraPanorama />} />
+          <Route path="/skills/extra-vitrina" element={<ModelExtraVitrina />} />
         </Routes>
       </main>
       

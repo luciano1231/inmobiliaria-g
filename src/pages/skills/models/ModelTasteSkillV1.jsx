@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { ArrowUpRight, Compass, MapPin, Zap, Flame } from 'lucide-react';
 import './ModelTasteSkillV1.css';
 
@@ -81,15 +82,18 @@ export function ModelTasteSkillV1() {
                     <span>{prop.bedrooms || 0} DORM.</span>
                   </div>
 
-                  <a 
-                    href={`https://wa.me/${prop.whatsapp}?text=${encodeURIComponent(`Hola, consulta por la propiedad: ${prop.title}`)}`}
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="v1-action-btn"
-                  >
-                    <span>CONSULTAR DISPONIBILIDAD</span>
-                    <ArrowUpRight size={14} />
-                  </a>
+                  <div className="v1-actions">
+                    <VerFichaLink id={prop.id} label="VER FICHA" />
+                    <a
+                      href={`https://wa.me/${prop.whatsapp}?text=${encodeURIComponent(`Hola, consulta por la propiedad: ${prop.title}`)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="v1-action-btn"
+                    >
+                      <span>CONSULTAR DISPONIBILIDAD</span>
+                      <ArrowUpRight size={14} />
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}

@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMap } from '../../../components/SkillMap';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import {
   Compass, Heart, Map, User, Search, SlidersHorizontal, 
   MapPin, BedDouble, Bath, ArrowUpRight, Share2, Sparkles, Battery, Wifi, Signal 
@@ -131,15 +132,18 @@ export function ModelMobileApp() {
                           <span>{prop.area} m²</span>
                         </div>
 
-                        <a 
-                          href={`https://wa.me/${prop.whatsapp}?text=Hola,%20consulta%20por%20la%20propiedad:%20${encodeURIComponent(prop.title)}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="mobile-wa-cta"
-                        >
-                          <span>Consultar por WhatsApp</span>
-                          <ArrowUpRight size={13} />
-                        </a>
+                        <div className="mobile-card-actions">
+                          <VerFichaLink id={prop.id} label="Ver ficha" />
+                          <a
+                            href={`https://wa.me/${prop.whatsapp}?text=Hola,%20consulta%20por%20la%20propiedad:%20${encodeURIComponent(prop.title)}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mobile-wa-cta"
+                          >
+                            <span>WhatsApp</span>
+                            <ArrowUpRight size={13} />
+                          </a>
+                        </div>
                       </div>
                     </article>
                   ))}

@@ -1,24 +1,39 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { mockProperties } from '../data/mockProperties';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import L from 'leaflet';
 import { MapPin, Bed, Bath, Square, ArrowLeft, CheckCircle2, Car, Tag } from 'lucide-react';
+import { FadeGallery } from '../components/FadeGallery';
 import './PropertyDetails.css';
+
+const pin = L.divIcon({
+  className: 'pd-pin-wrap',
+  html: '<span class="pd-pin"></span>',
+  iconSize: [22, 22],
+  iconAnchor: [11, 11],
+});
 
 export function PropertyDetails() {
   const { id } = useParams();
-  const property = mockProperties.find(p => p.id === parseInt(id));
+  const navigate = useNavigate();
+  const property = mockProperties.find((p) => p.id === parseInt(id, 10));
 
   if (!property) {
-    return <div className="container" style={{ marginTop: '100px' }}>Propiedad no encontrada</div>;
+    return (
+      <div className="container" style={{ marginTop: '120px', marginBottom: '80px' }}>
+        <p>Propiedad no encontrada.</p>
+        <Link to="/skills" className="back-link">Ver modelos</Link>
+      </div>
+    );
   }
 
   return (
     <div className="property-details-page">
       <div className="container">
-        <Link to="/" className="back-link flex items-center gap-2">
-          <ArrowLeft size={20} /> Volver al inicio
-        </Link>
+        <button type="button" onClick={() => navigate(-1)} className="back-link flex items-center gap-2">
+          <ArrowLeft size={20} /> Volver
+        </button>
 
         <div className="details-header flex justify-between items-center">
           <div>
@@ -38,13 +53,8 @@ export function PropertyDetails() {
           </div>
         </div>
 
-        <div className="image-gallery">
-          <img src={property.images[0]} alt="Principal" className="main-image" />
-          <div className="thumbnail-grid">
-            {property.images.slice(1).map((img, idx) => (
-              <img key={idx} src={img} alt={`Vista ${idx + 2}`} className="thumbnail-image" />
-            ))}
-          </div>
+        <div className="details-gallery">
+          <FadeGallery images={property.images} alt={property.title} height="460px" radius="var(--radius-lg)" />
         </div>
 
         <div className="details-content flex gap-6">
@@ -73,7 +83,7 @@ export function PropertyDetails() {
                   <Square size={24} className="text-primary" />
                   <div>
                     <strong>{property.area}</strong>
-                    <span>Metros Cuadrados</span>
+                    <span>Metros cuadrados</span>
                   </div>
                 </div>
               )}
@@ -92,7 +102,7 @@ export function PropertyDetails() {
             </div>
 
             <div className="amenities-section">
-              <h2>Características y Amenities</h2>
+              <h2>Características</h2>
               <div className="amenities-grid">
                 {property.amenities.map((amenity, idx) => (
                   <div key={idx} className="amenity-item flex items-center gap-2">
@@ -102,14 +112,28 @@ export function PropertyDetails() {
                 ))}
               </div>
             </div>
+
+            <div className="description-section">
+              <h2>Datos</h2>
+              <ul className="pd-datalist">
+                <li><span>Operación</span><strong>{property.operation}</strong></li>
+                <li><span>Tipo</span><strong>{property.type}</strong></li>
+                <li><span>Barrio</span><strong>{property.neighborhood}</strong></li>
+                <li><span>Ciudad</span><strong>{property.city}</strong></li>
+                <li><span>Provincia</span><strong>{property.province}</strong></li>
+                <li><span>Valor</span><strong>{property.priceLabel}</strong></li>
+              </ul>
+            </div>
           </div>
 
           <div className="sidebar-content">
             <div className="contact-card glass">
               <h3>¿Te interesa esta propiedad?</h3>
-              <p className="text-muted">Contacta a un agente ahora mismo para organizar una visita.</p>
-              <a 
-                href={`https://wa.me/${property.whatsapp}?text=${encodeURIComponent(`Hola! Estoy interesado en la propiedad: ${property.title} (ID: ${property.id})`)}`}
+              <p className="text-muted">Escribinos por WhatsApp para coordinar una visita.</p>
+              <a
+                href={`https://wa.me/${property.whatsapp}?text=${encodeURIComponent(
+                  `Hola! Estoy interesado en la propiedad: ${property.title} (ID: ${property.id})`
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary w-100"
@@ -121,17 +145,25 @@ export function PropertyDetails() {
             <div className="map-card glass">
               <h3>Ubicación</h3>
               <div className="mini-map">
-                <MapContainer 
-                  center={property.coordinates} 
-                  zoom={14} 
-                  style={{ height: '250px', width: '100%', borderRadius: 'var(--radius-md)' }}
+                <MapContainer
+                  center={property.coordinates}
+                  zoom={14}
+                  scrollWheelZoom={false}
+                  style={{ height: '280px', width: '100%', borderRadius: 'var(--radius-md)' }}
                 >
                   <TileLayer
-                    url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+                    attribution="Tiles &copy; Esri"
+                    url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+                    maxZoom={16}
                   />
-                  <Marker position={property.coordinates} />
+                  <TileLayer
+                    url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+                    maxZoom={16}
+                  />
+                  <Marker position={property.coordinates} icon={pin} />
                 </MapContainer>
               </div>
+              <p className="mini-map-caption">{property.neighborhood}, {property.city}</p>
             </div>
           </div>
         </div>

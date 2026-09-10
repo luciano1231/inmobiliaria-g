@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { ArrowRight, Compass, Home, KeyRound, MapPin, Sparkles } from 'lucide-react';
 import './ModelMinimalist.css';
 
@@ -100,12 +101,13 @@ export function ModelMinimalist() {
 
                     <div className="bento-footer">
                       <div className="bento-tags">
+                        <VerFichaLink id={prop.id} />
                         {prop.amenities?.slice(0, 2).map((f, i) => (
                           <span key={i} className="pastel-tag">{f}</span>
                         ))}
                       </div>
 
-                      <a 
+                      <a
                         href={`https://wa.me/${prop.whatsapp}?text=Hola,%20me%20interesa%20la%20propiedad:%20${encodeURIComponent(prop.title)}`}
                         target="_blank"
                         rel="noreferrer"

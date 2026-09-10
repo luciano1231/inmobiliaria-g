@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { ArrowUpRight, Check, MapPin, Sliders, ShieldCheck, Sparkles } from 'lucide-react';
 import './ModelRedesign.css';
 
@@ -115,7 +116,8 @@ export function ModelRedesign() {
                     </div>
 
                     <div className="zigzag-actions">
-                      <a 
+                      <VerFichaLink id={prop.id} />
+                      <a
                         href={`https://wa.me/${prop.whatsapp}?text=Hola,%20consulta%20por:%20${encodeURIComponent(prop.title)}`}
                         target="_blank" 
                         rel="noreferrer"

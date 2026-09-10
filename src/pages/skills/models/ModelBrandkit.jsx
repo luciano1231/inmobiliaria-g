@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { Layers, Palette, Type, Award, Grid, ArrowUpRight, Check, MapPin } from 'lucide-react';
 import './ModelBrandkit.css';
 
@@ -113,15 +114,18 @@ export function ModelBrandkit() {
                     <div><label>VALOR</label><strong className="val-text">{prop.priceLabel}</strong></div>
                   </div>
 
-                  <a 
-                    href={`https://wa.me/${prop.whatsapp}?text=Hola,%20consulta%20por%20asset%20${prop.id}`}
+                  <div className="brand-card-links">
+                  <VerFichaLink id={prop.id} />
+                  <a
+                    href={`https://wa.me/${prop.whatsapp}?text=Hola,%20consulta%20por%20la%20propiedad%20${prop.id}`}
                     target="_blank"
                     rel="noreferrer"
                     className="brand-card-cta"
                   >
-                    <span>Abrir Expediente Notarial</span>
+                    <span>Consultar por WhatsApp</span>
                     <ArrowUpRight size={14} />
                   </a>
+                  </div>
                 </div>
               </article>
             ))}

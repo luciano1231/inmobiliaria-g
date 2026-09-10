@@ -74,8 +74,8 @@ export function LandingPage() {
         <div className="landing-header-actions">
           <Link to="/skills" className="btn-skills-lab">
             <Sparkles size={18} className="sparkle-icon-pulse" />
-            <span>Explorar Modelos por Skills (.agent/skills)</span>
-            <span className="skills-badge-count">13 Diseños</span>
+            <span>Ver más modelos de diseño</span>
+            <span className="skills-badge-count">17 diseños</span>
             <ArrowRight size={16} />
           </Link>
         </div>
@@ -125,37 +125,35 @@ export function LandingPage() {
           </div>
         </section>
 
-        {/* NUEVA SECCIÓN DESTACADA: BANNER DEL LABORATORIO DE SKILLS */}
+        {/* SECCIÓN: MÁS MODELOS DE DISEÑO */}
         <section className="landing-skills-banner-section">
           <div className="skills-lab-banner">
             <div className="skills-banner-content">
               <span className="skills-banner-tag">
-                <Sparkles size={15} /> Laboratorio de Agent Skills (.agent/skills)
+                <Sparkles size={15} /> 17 modelos de diseño
               </span>
-              <h2>¿Querés ver más estilos? Diseñamos un modelo por cada Skill instalada</h2>
+              <h2>¿Buscás otra estética? Probá los modelos alternativos</h2>
               <p>
-                13 páginas completas construidas respetando las directivas exactas de cada skill:
-                industrial brutalista, minimalismo editorial, diseño agency de $150k, bento AIDA,
-                interfaz móvil nativa, identidad de marca, y más.
+                17 diseños de página completos que comparten el mismo catálogo, el mismo mapa y los
+                mismos filtros. Editorial cálido, agencia premium, revista de arquitectura, catálogo
+                denso, app móvil y más. Empezá por los 5 modelos <strong>Extra</strong>.
               </p>
               <div className="skills-banner-pills">
-                <span>brutalist-skill</span>
-                <span>minimalist-skill</span>
-                <span>soft-skill</span>
-                <span>stitch-skill</span>
-                <span>gpt-tasteskill</span>
-                <span>taste-skill</span>
-                <span>brandkit</span>
-                <span>redesign-skill</span>
-                <span>imagegen-frontend-mobile</span>
-                <span>imagegen-frontend-web</span>
-                <span>image-to-code-skill</span>
-                <span>taste-skill-v1</span>
-                <span>output-skill</span>
+                <span>Aurora · editorial cálido</span>
+                <span>Signature · agencia premium</span>
+                <span>Galería · revista</span>
+                <span>Panorama · el mapa primero</span>
+                <span>Vitrina · catálogo denso</span>
+                <span>Minimalista</span>
+                <span>Alta gama</span>
+                <span>Bento cinematográfico</span>
+                <span>App móvil</span>
+                <span>Narrativa por capítulos</span>
+                <span>Tabla comparativa</span>
               </div>
               <Link to="/skills" className="btn-skills-open">
                 <Layers size={18} />
-                <span>Explorar los 13 Modelos de Skills</span>
+                <span>Ver los 17 modelos</span>
                 <ArrowRight size={18} />
               </Link>
             </div>

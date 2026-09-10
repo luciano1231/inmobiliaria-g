@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { ArrowUpRight, Compass, ShieldCheck, Sparkles, Gem, Building } from 'lucide-react';
 import './ModelSoftSkill.css';
 
@@ -142,7 +143,8 @@ export function ModelSoftSkill() {
                     </div>
 
                     <div className="doppelrand-action-bar">
-                      <a 
+                      <VerFichaLink id={prop.id} />
+                      <a
                         href={`https://wa.me/${prop.whatsapp}?text=Deseo%20coordinar%20una%20visita%20privada%20para:%20${encodeURIComponent(prop.title)}`}
                         target="_blank"
                         rel="noreferrer"

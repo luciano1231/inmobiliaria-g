@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { Search, Sliders, ArrowUpRight, Compass, Shield, MapPin } from 'lucide-react';
 import './ModelStitch.css';
 
@@ -154,7 +155,8 @@ export function ModelStitch() {
                   </div>
 
                   <div className="stitch-card-actions">
-                    <a 
+                    <VerFichaLink id={prop.id} />
+                    <a
                       href={`https://wa.me/${prop.whatsapp}?text=Hola,%20consulta%20técnica%20sobre:%20${encodeURIComponent(prop.title)}`}
                       target="_blank"
                       rel="noreferrer"

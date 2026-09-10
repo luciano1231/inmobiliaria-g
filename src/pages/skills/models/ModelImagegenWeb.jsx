@@ -3,6 +3,7 @@ import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
 import { FadeGallery } from '../../../components/FadeGallery';
 import { SkillMapSection } from '../../../components/SkillMapSection';
+import { VerFichaLink } from '../../../components/VerFichaLink';
 import { Compass, ArrowRight, MapPin, Eye, CheckCircle, PhoneCall, Sparkles } from 'lucide-react';
 import './ModelImagegenWeb.css';
 
@@ -61,7 +62,8 @@ export function ModelImagegenWeb() {
 
             <div className="chapter-price-row">
               <span className="chapter-val">{p2.priceLabel}</span>
-              <a 
+              <VerFichaLink id={p2.id} />
+              <a
                 href={`https://wa.me/${p2.whatsapp}?text=Consulta%20Capitulo%202:%20${encodeURIComponent(p2.title)}`}
                 target="_blank"
                 rel="noreferrer"
@@ -88,7 +90,8 @@ export function ModelImagegenWeb() {
             <div><span>LOCALIDAD</span><strong>{p3.city}</strong></div>
             <div><span>VALOR</span><strong className="text-gold">{p3.priceLabel}</strong></div>
             <div><span>ESTADO</span><strong>Listo para Escriturar</strong></div>
-            <a 
+            <VerFichaLink id={p3.id} />
+            <a
               href={`https://wa.me/${p3.whatsapp}?text=Consulta%20propiedad%20ribereña:%20${encodeURIComponent(p3.title)}`}
               target="_blank"
               rel="noreferrer"
@@ -151,13 +154,7 @@ export function ModelImagegenWeb() {
                   <p className="narrative-cat-loc"><MapPin size={13} /> {prop.location}</p>
                   <div className="narrative-cat-foot">
                     <strong>{prop.priceLabel}</strong>
-                    <a
-                      href={`https://wa.me/${prop.whatsapp}?text=${encodeURIComponent(`Hola, consulta por: ${prop.title}`)}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Consultar <ArrowRight size={13} />
-                    </a>
+                    <VerFichaLink id={prop.id} />
                   </div>
                 </div>
               </article>

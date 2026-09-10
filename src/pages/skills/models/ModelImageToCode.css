@@ -1,7 +1,7 @@
 /* IMAGE-TO-CODE FIDELITY STYLES */
 .img2code-page {
-  background-color: #0b0f17;
-  color: #e2e8f0;
+  background-color: #f6f7f9;
+  color: #1c2530;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -18,7 +18,7 @@
 /* Header */
 .img2code-header {
   padding: 50px 0 60px;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #e4e8ee;
 }
 
 .fidelity-badge {
@@ -48,7 +48,7 @@
 
 .img2code-lead {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: #5b6675;
   max-width: 660px;
   margin: 0 0 28px;
   line-height: 1.6;
@@ -61,9 +61,9 @@
 }
 
 .img2code-filter-btn {
-  background: #111722;
-  border: 1px solid #1e293b;
-  color: #94a3b8;
+  background: #ffffff;
+  border: 1px solid #e4e8ee;
+  color: #5b6675;
   padding: 8px 18px;
   border-radius: 9999px;
   font-size: 0.82rem;
@@ -73,12 +73,12 @@
 }
 .img2code-filter-btn:hover {
   border-color: #38bdf8;
-  color: #e2e8f0;
+  color: #1c2530;
 }
 .img2code-filter-btn.active {
   background: #38bdf8;
   border-color: #38bdf8;
-  color: #0b1220;
+  color: #f6f7f9;
 }
 
 .toggle-code-bar {
@@ -87,8 +87,8 @@
 }
 
 .code-toggle-btn {
-  background: #1e293b;
-  border: 1px solid #334155;
+  background: #e4e8ee;
+  border: 1px solid #cbd5e1;
   color: #38bdf8;
   padding: 8px 16px;
   border-radius: 6px;
@@ -99,14 +99,14 @@
 }
 
 .code-toggle-btn:hover {
-  background: #334155;
+  background: #cbd5e1;
   color: #ffffff;
 }
 
 .code-dossier-panel {
   margin-top: 20px;
-  background: #06090e;
-  border: 1px solid #1e293b;
+  background: #eef1f5;
+  border: 1px solid #e4e8ee;
   border-radius: 8px;
   padding: 16px;
   font-family: monospace;
@@ -124,8 +124,8 @@
   display: grid;
   grid-template-columns: 1.25fr 1fr;
   gap: 40px;
-  background: #111722;
-  border: 1px solid #1e293b;
+  background: #ffffff;
+  border: 1px solid #e4e8ee;
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 60px;
@@ -165,7 +165,7 @@
 
 .live-price-tag {
   background: #38bdf8;
-  color: #0b0f17;
+  color: #f6f7f9;
   font-size: 1.15rem;
   font-weight: 800;
   padding: 6px 14px;
@@ -183,7 +183,7 @@
   align-items: center;
   gap: 4px;
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #5b6675;
   margin-bottom: 8px;
 }
 
@@ -196,7 +196,7 @@
 }
 
 .stage-desc {
-  color: #94a3b8;
+  color: #5b6675;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0 0 28px;
@@ -206,8 +206,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  background: #0b0f17;
-  border: 1px solid #1e293b;
+  background: #f6f7f9;
+  border: 1px solid #e4e8ee;
   padding: 16px;
   border-radius: 10px;
   margin-bottom: 32px;
@@ -216,7 +216,7 @@
 .spec-tile span {
   display: block;
   font-size: 0.68rem;
-  color: #64748b;
+  color: #7b8694;
   letter-spacing: 0.05em;
 }
 
@@ -230,7 +230,7 @@
   align-items: center;
   gap: 8px;
   background: #ffffff;
-  color: #0b0f17;
+  color: #f6f7f9;
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 700;
@@ -256,8 +256,8 @@
 }
 
 .thumb-item {
-  background: #111722;
-  border: 1px solid #1e293b;
+  background: #ffffff;
+  border: 1px solid #e4e8ee;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -301,7 +301,7 @@
 
 /* Footer */
 .img2code-footer {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #e4e8ee;
   padding: 32px 0;
 }
 
@@ -310,7 +310,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.82rem;
-  color: #64748b;
+  color: #7b8694;
 }
 
 .footer-row-clean strong {
@@ -347,4 +347,35 @@
   .credit-tag {
     text-align: center;
   }
+}
+
+.stage-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.img2code-page .ver-ficha-link { color: #38bdf8; }
+
+/* --- Ajustes tras pasar a tema claro --- */
+.img2code-page .img2code-h1,
+.img2code-page .stage-title,
+.img2code-page .spec-tile strong,
+.img2code-page .thumb-info strong,
+.img2code-page .footer-row-clean strong {
+  color: #0f172a;
+}
+.img2code-page .code-toggle-btn:hover { color: #0f172a; }
+.img2code-page .stage-primary-btn {
+  background: #0ea5e9;
+  color: #ffffff;
+}
+.img2code-page .stage-primary-btn:hover { background: #0284c7; }
+.img2code-page .live-rendered-tag {
+  background: rgba(15, 23, 42, 0.78);
+  color: #ffffff;
+}
+.img2code-page .dual-hero-stage,
+.img2code-page .thumb-item {
+  box-shadow: 0 14px 34px -20px rgba(0, 0, 0, 0.25);
 }

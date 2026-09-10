@@ -1,7 +1,7 @@
 /* AWWWARDS-LEVEL MOTION & GAPLESS BENTO STYLES */
 .gpt-taste-page {
-  background-color: #08090c;
-  color: #f1f5f9;
+  background-color: #f6f6f4;
+  color: #1c2430;
   font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -56,7 +56,7 @@
 .gpt-brand strong {
   font-size: 0.85rem;
   letter-spacing: 0.08em;
-  color: #ffffff;
+  color: #14181f;
 }
 
 .gpt-nav-items {
@@ -68,7 +68,7 @@
 .gpt-tab-btn {
   background: transparent;
   border: none;
-  color: #94a3b8;
+  color: #6b7280;
   font-size: 0.8rem;
   font-weight: 500;
   padding: 6px 14px;
@@ -78,20 +78,20 @@
 }
 
 .gpt-tab-btn:hover {
-  color: #ffffff;
+  color: #14181f;
 }
 
 .gpt-tab-btn.active {
   background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
+  color: #14181f;
 }
 
 .gpt-nav-cta {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  color: #08090c;
+  background: #14181f;
+  color: #f6f6f4;
   text-decoration: none;
   font-size: 0.78rem;
   font-weight: 600;
@@ -118,7 +118,7 @@
   letter-spacing: -0.035em;
   max-width: 1050px;
   margin: 0 auto 24px;
-  color: #ffffff;
+  color: #14181f;
 }
 
 .inline-type-pill {
@@ -135,7 +135,7 @@
 
 .gpt-hero-desc {
   font-size: 1.15rem;
-  color: #94a3b8;
+  color: #6b7280;
   max-width: 650px;
   margin: 0 auto 36px;
   line-height: 1.6;
@@ -150,8 +150,8 @@
 }
 
 .gpt-btn-primary {
-  background: #ffffff;
-  color: #08090c;
+  background: #14181f;
+  color: #f6f6f4;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 700;
@@ -168,7 +168,7 @@
 .gpt-btn-ghost {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  color: #14181f;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -198,7 +198,7 @@
 }
 
 .bento-heading-row p {
-  color: #94a3b8;
+  color: #6b7280;
   font-size: 0.95rem;
   margin: 0;
 }
@@ -211,7 +211,7 @@
 }
 
 .gpt-bento-card {
-  background: #111319;
+  background: #f6f6f4;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   overflow: hidden;
@@ -267,7 +267,7 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  color: #14181f;
   font-size: 0.72rem;
   font-weight: 600;
   padding: 4px 10px;
@@ -295,7 +295,7 @@
   align-items: center;
   gap: 4px;
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: #6b7280;
   margin-bottom: 8px;
 }
 
@@ -304,12 +304,12 @@
   font-weight: 700;
   margin: 0 0 8px;
   letter-spacing: -0.015em;
-  color: #ffffff;
+  color: #14181f;
 }
 
 .bento-card-desc {
   font-size: 0.82rem;
-  color: #8896aa;
+  color: #6b7280;
   line-height: 1.5;
   margin: 0 0 16px;
   display: -webkit-box;
@@ -322,7 +322,7 @@
   display: flex;
   gap: 8px;
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: #6b7280;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   margin-bottom: 16px;
@@ -333,7 +333,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  color: #f1f5f9;
+  color: #1c2430;
   text-decoration: none;
   font-size: 0.78rem;
   font-weight: 600;
@@ -350,7 +350,7 @@
 }
 
 .desire-box {
-  background: #11141c;
+  background: #f6f6f4;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 48px;
@@ -374,11 +374,11 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0 0 12px;
-  color: #ffffff;
+  color: #14181f;
 }
 
 .desire-text p {
-  color: #94a3b8;
+  color: #6b7280;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -395,20 +395,20 @@
 .desire-metrics strong {
   display: block;
   font-size: 1.6rem;
-  color: #ffffff;
+  color: #14181f;
   font-weight: 800;
 }
 
 .desire-metrics span {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #6b7280;
 }
 
 /* ACTION FOOTER */
 .gpt-action-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 80px 0 40px;
-  background: #06070a;
+  background: #f6f6f4;
 }
 
 .footer-callout {
@@ -425,7 +425,7 @@
 }
 
 .footer-callout p {
-  color: #94a3b8;
+  color: #6b7280;
   font-size: 1.05rem;
   margin: 0 0 28px;
 }
@@ -439,12 +439,12 @@
 }
 
 .footer-bottom-bar strong {
-  color: #fff;
+  color: #14181f;
   font-size: 0.88rem;
 }
 
 .footer-bottom-bar p {
-  color: #64748b;
+  color: #6b7280;
   font-size: 0.78rem;
   margin: 2px 0 0;
 }
@@ -462,7 +462,7 @@
 }
 
 .footer-skill-tag label {
-  color: #64748b;
+  color: #6b7280;
 }
 
 @media (max-width: 860px) {
@@ -492,3 +492,21 @@
     text-align: center;
   }
 }
+
+.bento-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== Corrección tema claro (GptTaste) ===== */
+.gpt-taste-page { color: #1a1f27; }
+.gpt-taste-page .gpt-btn-primary { background: #14181f; color: #ffffff; }
+.gpt-taste-page .gpt-floating-nav,
+.gpt-taste-page .gpt-bento-card,
+.gpt-taste-page .bento-info-box { background: #ffffff; }
+.gpt-taste-page .gpt-wide-h1,
+.gpt-taste-page .bento-card-title,
+.gpt-taste-page h2 { color: #14181f; }
