@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { Table, CheckCircle2, ArrowUpRight, FileSpreadsheet, ShieldAlert, Sparkles } from 'lucide-react';
 import './ModelOutputSkill.css';
 
@@ -103,7 +105,7 @@ export function ModelOutputSkill() {
 
             <div className="report-body">
               <div className="report-media">
-                <img src={selectedProp.images[0]} alt={selectedProp.title} />
+                <FadeGallery images={selectedProp.images} alt={selectedProp.title} height="260px" />
               </div>
 
               <div className="report-data">
@@ -118,7 +120,7 @@ export function ModelOutputSkill() {
                 <div className="features-checklist">
                   <h4>Prestaciones &amp; Equipamiento Verificado:</h4>
                   <div className="feat-tags">
-                    {selectedProp.features?.map((f, i) => (
+                    {selectedProp.amenities?.map((f, i) => (
                       <span key={i} className="feat-chip"><CheckCircle2 size={13} /> {f}</span>
                     ))}
                   </div>
@@ -139,6 +141,16 @@ export function ModelOutputSkill() {
           </section>
         </div>
       </main>
+
+      <SkillMapSection
+        properties={mockProperties}
+        variant="mono"
+        accent="#0f766e"
+        tone="light"
+        label="Registro geográfico completo"
+        title="Las 32 unidades sobre el mapa, sin omisiones"
+        note="Cada fila de la tabla tiene su marcador. Click en el punto para abrir la ficha completa."
+      />
 
       <footer className="output-footer">
         <div className="output-container footer-bar">

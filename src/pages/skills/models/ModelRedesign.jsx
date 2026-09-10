@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { ArrowUpRight, Check, MapPin, Sliders, ShieldCheck, Sparkles } from 'lucide-react';
 import './ModelRedesign.css';
 
@@ -82,7 +84,7 @@ export function ModelRedesign() {
               return (
                 <article key={prop.id} className={`zigzag-card ${isEven ? 'zigzag-normal' : 'zigzag-reversed'}`}>
                   <div className="zigzag-media">
-                    <img src={prop.images[0]} alt={prop.title} loading="lazy" />
+                    <FadeGallery images={prop.images} alt={prop.title} height="340px" />
                     <span className="zigzag-tag">{prop.operation}</span>
                     <div className="zigzag-price-badge">{prop.priceLabel}</div>
                   </div>
@@ -155,6 +157,16 @@ export function ModelRedesign() {
           </div>
         </div>
       </section>
+
+      <SkillMapSection
+        properties={mockProperties}
+        variant="light"
+        accent="#1d4ed8"
+        tone="light"
+        label="Ubicación real"
+        title="Sin filtros engañosos: mirá dónde está cada inmueble"
+        note="Mapa depurado con todas las propiedades auditadas de Corrientes y alrededores."
+      />
 
       {/* FOOTER */}
       <footer className="redesign-footer">

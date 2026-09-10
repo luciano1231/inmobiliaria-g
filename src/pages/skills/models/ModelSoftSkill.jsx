@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { ArrowUpRight, Compass, ShieldCheck, Sparkles, Gem, Building } from 'lucide-react';
 import './ModelSoftSkill.css';
 
@@ -111,7 +113,7 @@ export function ModelSoftSkill() {
               <article key={prop.id} className="doppelrand-shell">
                 <div className="doppelrand-core">
                   <div className="doppelrand-media">
-                    <img src={prop.images[0]} alt={prop.title} loading="lazy" />
+                    <FadeGallery images={prop.images} alt={prop.title} height="260px" radius="1.25rem" />
                     <div className="media-overlay-gradient"></div>
                     <div className="doppelrand-floating-tag">
                       {prop.operation} • {prop.type}
@@ -181,6 +183,16 @@ export function ModelSoftSkill() {
           </div>
         </div>
       </section>
+
+      <SkillMapSection
+        properties={mockProperties}
+        variant="dark"
+        accent="#c9a227"
+        tone="dark"
+        label="Localización de activos"
+        title="El portafolio, sobre el mapa"
+        note="Residencias y lotes en Corrientes y su área de influencia. Elegí un marcador para ver la ficha completa."
+      />
 
       {/* FOOTER */}
       <footer className="soft-footer">

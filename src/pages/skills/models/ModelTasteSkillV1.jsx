@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { ArrowUpRight, Compass, MapPin, Zap, Flame } from 'lucide-react';
 import './ModelTasteSkillV1.css';
 
@@ -62,7 +64,7 @@ export function ModelTasteSkillV1() {
             {filtered.map((prop, idx) => (
               <article key={prop.id} className="v1-card">
                 <div className="v1-media">
-                  <img src={prop.images[0]} alt={prop.title} />
+                  <FadeGallery images={prop.images} alt={prop.title} height="220px" showDots={false} />
                   <span className="v1-num-tag">#{String(idx + 1).padStart(2, '0')}</span>
                   <span className="v1-op-badge">{prop.operation}</span>
                 </div>
@@ -94,6 +96,16 @@ export function ModelTasteSkillV1() {
           </div>
         </div>
       </main>
+
+      <SkillMapSection
+        properties={filtered}
+        variant="mono"
+        accent="#111111"
+        tone="light"
+        label="[ MAPA ]"
+        title="INMUEBLES SOBRE EL TERRITORIO"
+        note="Disponibilidad geolocalizada. El mapa sigue el filtro activo (venta / alquiler)."
+      />
 
       <footer className="v1-footer">
         <div className="v1-container v1-footer-flex">

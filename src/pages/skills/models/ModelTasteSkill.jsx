@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { ArrowRight, Compass, Eye, Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
 import './ModelTasteSkill.css';
 
@@ -52,7 +54,7 @@ export function ModelTasteSkill() {
 
             <div className="taste-hero-image-block">
               <div className="offset-card">
-                <img src={mockProperties[2].images[0]} alt="Propiedad destacada" />
+                <FadeGallery images={mockProperties[2].images} alt="Propiedad destacada" height="380px" />
                 <div className="offset-card-caption">
                   <span>RESIDENCIA DESTACADA</span>
                   <strong>{mockProperties[2].title}</strong>
@@ -91,7 +93,7 @@ export function ModelTasteSkill() {
             {properties.map((prop, idx) => (
               <article key={prop.id} className={`taste-prop-row ${idx % 2 === 1 ? 'row-reversed' : ''}`}>
                 <div className="taste-prop-media">
-                  <img src={prop.images[0]} alt={prop.title} loading="lazy" />
+                  <FadeGallery images={prop.images} alt={prop.title} height="300px" />
                   <span className="prop-city-tag">{prop.city}</span>
                 </div>
 
@@ -169,6 +171,16 @@ export function ModelTasteSkill() {
           </div>
         </div>
       </section>
+
+      <SkillMapSection
+        properties={properties}
+        variant="mono"
+        accent="#b91c1c"
+        tone="light"
+        label="Territorio"
+        title="La arquitectura del Litoral, ubicada"
+        note="Mapa vinculado al filtro de ubicación. Cada punto abre el dossier de la propiedad."
+      />
 
       {/* FOOTER */}
       <footer className="taste-footer">

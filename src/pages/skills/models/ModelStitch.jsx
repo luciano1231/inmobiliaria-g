@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { Search, Sliders, ArrowUpRight, Compass, Shield, MapPin } from 'lucide-react';
 import './ModelStitch.css';
 
@@ -91,7 +93,7 @@ export function ModelStitch() {
                 <span className="board-badge">VERIFICADO</span>
               </div>
               <div className="board-visual">
-                <img src={mockProperties[1].images[0]} alt="Propiedad destacada" />
+                <FadeGallery images={mockProperties[1].images} alt="Propiedad destacada" height="230px" />
                 <div className="board-visual-tag">{mockProperties[1].priceLabel}</div>
               </div>
               <div className="board-meta">
@@ -122,7 +124,7 @@ export function ModelStitch() {
             {filtered.map((prop) => (
               <article key={prop.id} className="stitch-card">
                 <div className="stitch-card-image-box">
-                  <img src={prop.images[0]} alt={prop.title} loading="lazy" />
+                  <FadeGallery images={prop.images} alt={prop.title} height="210px" />
                   <span className="stitch-card-type-pill">{prop.type}</span>
                   <span className="stitch-card-op-pill">{prop.operation}</span>
                 </div>
@@ -168,6 +170,16 @@ export function ModelStitch() {
           </div>
         </div>
       </main>
+
+      <SkillMapSection
+        properties={filtered}
+        variant="light"
+        accent="#18181b"
+        tone="light"
+        label="Índice geoespacial"
+        title="Parcelas indexadas en el territorio"
+        note="Trazabilidad de cada unidad sobre el mapa. Los marcadores siguen el filtro activo del catálogo."
+      />
 
       {/* FOOTER */}
       <footer className="stitch-footer">

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
-import { 
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMap } from '../../../components/SkillMap';
+import {
   Compass, Heart, Map, User, Search, SlidersHorizontal, 
   MapPin, BedDouble, Bath, ArrowUpRight, Share2, Sparkles, Battery, Wifi, Signal 
 } from 'lucide-react';
@@ -106,7 +108,7 @@ export function ModelMobileApp() {
                   {filtered.map((prop, idx) => (
                     <article key={prop.id} className="mobile-prop-card">
                       <div className="prop-thumb-box">
-                        <img src={prop.images[0]} alt={prop.title} />
+                        <FadeGallery images={prop.images} alt={prop.title} height="150px" showDots={false} />
                         <span className="mobile-tag-op">{prop.operation}</span>
                         <button 
                           onClick={() => toggleFavorite(prop.id)}
@@ -144,15 +146,18 @@ export function ModelMobileApp() {
 
               {activeTab === 'map' && (
                 <div className="app-map-view">
-                  <div className="mock-map-bg">
-                    <div className="map-pin-badge pin-1"><MapPin size={12} /> {currentProp.city}</div>
-                    <div className="map-pin-badge pin-2"><MapPin size={12} /> Corrientes</div>
-                    <div className="map-card-popup">
-                      <img src={currentProp.images[0]} alt="Prop" />
-                      <div>
-                        <strong>{currentProp.title}</strong>
-                        <p>{currentProp.priceLabel}</p>
-                      </div>
+                  <SkillMap
+                    properties={filtered}
+                    variant="light"
+                    accent="#ef4444"
+                    height="100%"
+                    zoomControl={false}
+                  />
+                  <div className="map-card-popup">
+                    <img src={currentProp.images[0]} alt="Prop" />
+                    <div>
+                      <strong>{currentProp.title}</strong>
+                      <p>{currentProp.priceLabel}</p>
                     </div>
                   </div>
                 </div>

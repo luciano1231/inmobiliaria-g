@@ -344,6 +344,21 @@
   background-size: 16px 16px;
 }
 
+/* Vista de mapa real dentro del teléfono */
+.app-map-view {
+  padding: 0 !important;
+  display: block !important;
+  position: relative;
+}
+.app-map-view .skillmap {
+  position: absolute;
+  inset: 0;
+  height: 100% !important;
+}
+.app-map-view .map-card-popup {
+  z-index: 500;
+}
+
 .map-pin-badge {
   position: absolute;
   background: #0f172a;

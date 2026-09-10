@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { Image, Code, Eye, ArrowUpRight, Check, MapPin, Maximize2 } from 'lucide-react';
 import './ModelImageToCode.css';
 
@@ -52,7 +54,7 @@ export function ModelImageToCode() {
   "elevation": "0 15px 35px rgba(0,0,0,0.5)",
   "activePropertyId": "${activeProperty.id}",
   "title": "${activeProperty.title}",
-  "coordinates": "${activeProperty.lat}, ${activeProperty.lng}"
+  "coordinates": "${activeProperty.coordinates?.[0]}, ${activeProperty.coordinates?.[1]}"
 }`}
               </pre>
             </div>
@@ -65,7 +67,7 @@ export function ModelImageToCode() {
         <div className="img2code-container">
           <div className="dual-hero-stage">
             <div className="stage-image-hero">
-              <img src={activeProperty.images[0]} alt={activeProperty.title} />
+              <FadeGallery images={activeProperty.images} alt={activeProperty.title} height="420px" />
               <div className="stage-image-overlay">
                 <span className="live-rendered-tag">RENDER FIEL</span>
                 <span className="live-price-tag">{activeProperty.priceLabel}</span>
@@ -127,6 +129,16 @@ export function ModelImageToCode() {
           </div>
         </div>
       </main>
+
+      <SkillMapSection
+        properties={mockProperties}
+        variant="blueprint"
+        accent="#38bdf8"
+        tone="dark"
+        label="Blueprint geoespacial"
+        title="Del render al plano: ubicación exacta"
+        note="Implementación fiel también en el mapa. Cada marcador enlaza a la carpeta técnica de la propiedad."
+      />
 
       {/* FOOTER */}
       <footer className="img2code-footer">

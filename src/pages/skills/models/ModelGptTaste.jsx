@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { ArrowUpRight, Compass, Sparkles, Star, MapPin, Eye } from 'lucide-react';
 import './ModelGptTaste.css';
 
@@ -91,7 +93,11 @@ export function ModelGptTaste() {
                   className={`gpt-bento-card ${isHeroCard ? 'card-hero-span' : ''} ${isWideCard ? 'card-wide-span' : ''}`}
                 >
                   <div className="bento-media-frame">
-                    <img src={prop.images[0]} alt={prop.title} loading="lazy" />
+                    <FadeGallery
+                      images={prop.images}
+                      alt={prop.title}
+                      height={isHeroCard ? '360px' : '220px'}
+                    />
                     <div className="bento-card-overlay"></div>
                     <span className="bento-pill-tag">{prop.operation} • {prop.type}</span>
                     <span className="bento-price-tag">{prop.priceLabel}</span>
@@ -159,6 +165,17 @@ export function ModelGptTaste() {
           </div>
         </div>
       </section>
+
+      {/* AIDA DESIRE (MAPA): UBICACIONES */}
+      <SkillMapSection
+        properties={properties}
+        variant="light"
+        accent="#0f172a"
+        tone="cream"
+        label="Interés · ubicación"
+        title="Cada propiedad, geolocalizada"
+        note="El mapa acompaña el filtro del catálogo bento. Tocá un punto para abrir la ficha de la propiedad."
+      />
 
       {/* AIDA ACTION: MASSIVE FOOTER */}
       <footer className="gpt-action-footer">

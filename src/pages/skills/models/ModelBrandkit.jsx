@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { Layers, Palette, Type, Award, Grid, ArrowUpRight, Check, MapPin } from 'lucide-react';
 import './ModelBrandkit.css';
 
@@ -96,7 +98,7 @@ export function ModelBrandkit() {
                 </div>
 
                 <div className="brand-card-media">
-                  <img src={prop.images[0]} alt={prop.title} />
+                  <FadeGallery images={prop.images} alt={prop.title} height="220px" showDots={false} />
                   <div className="card-blueprint-mark">+</div>
                 </div>
 
@@ -151,6 +153,24 @@ export function ModelBrandkit() {
               <p>Desde la primera visita hasta la firma final de escritura, te acompaña Luciano Jensen de forma directa y personalizada.</p>
             </div>
           </div>
+        </section>
+
+        {/* BOARD 04: GEO APPLICATION */}
+        <section className="brandkit-board board-map-panel">
+          <div className="board-topline">
+            <span className="deck-id">SECTION 04 // GEO APPLICATION</span>
+            <span className="deck-title">MAPA DE ACTIVOS DE MARCA</span>
+            <span className="deck-page">PAGE 04 / 04</span>
+          </div>
+          <SkillMapSection
+            properties={mockProperties}
+            variant="blueprint"
+            accent="#c29b63"
+            tone="dark"
+            label="Aplicación cartográfica"
+            title="El sistema de marca sobre el territorio"
+            note="Cada activo del portafolio, posicionado en Corrientes y su región. Marcador = ficha de propiedad."
+          />
         </section>
 
         {/* FOOTER BOARD */}

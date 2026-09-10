@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { ArrowRight, Compass, Home, KeyRound, MapPin, Sparkles } from 'lucide-react';
 import './ModelMinimalist.css';
 
@@ -71,7 +73,11 @@ export function ModelMinimalist() {
                   className={`bento-card ${isLarge ? 'bento-span-2' : ''}`}
                 >
                   <div className="bento-media">
-                    <img src={prop.images[0]} alt={prop.title} loading="lazy" />
+                    <FadeGallery
+                      images={prop.images}
+                      alt={prop.title}
+                      height={isLarge ? '320px' : '240px'}
+                    />
                     <span className="bento-badge">
                       {prop.type}
                     </span>
@@ -96,7 +102,7 @@ export function ModelMinimalist() {
 
                     <div className="bento-footer">
                       <div className="bento-tags">
-                        {prop.features?.slice(0, 2).map((f, i) => (
+                        {prop.amenities?.slice(0, 2).map((f, i) => (
                           <span key={i} className="pastel-tag">{f}</span>
                         ))}
                       </div>
@@ -142,6 +148,16 @@ export function ModelMinimalist() {
           </section>
         </div>
       </main>
+
+      <SkillMapSection
+        properties={mockProperties}
+        variant="mono"
+        accent="#9F2F2D"
+        tone="light"
+        label="Mapa del catálogo"
+        title="Dónde está cada propiedad"
+        note="Ubicaciones reales en Corrientes capital y localidades cercanas. Seleccioná un punto para abrir la ficha."
+      />
 
       <footer className="minimalist-footer">
         <div className="minimalist-container footer-flex">

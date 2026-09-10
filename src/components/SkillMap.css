@@ -1,0 +1,83 @@
+.skillmap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.skillmap .leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  font-family: inherit;
+}
+
+/* Variantes de teñido del mapa */
+.skillmap--mono .leaflet-tile-pane {
+  filter: grayscale(1) contrast(1.05);
+}
+.skillmap--blueprint .leaflet-tile-pane {
+  filter: grayscale(1) invert(0.92) hue-rotate(180deg) brightness(0.85) contrast(1.1) saturate(2.2);
+}
+
+/* Marcadores */
+.skillmap-pin-wrap {
+  background: none;
+  border: none;
+}
+.skillmap-pin {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--pin, #2563eb);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+.skillmap--dark .skillmap-pin,
+.skillmap--blueprint .skillmap-pin {
+  border-color: #0b0b0b;
+  box-shadow: 0 0 0 1px var(--pin, #2563eb), 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Popup */
+.skillmap-popup .leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+.skillmap-popup .leaflet-popup-content {
+  margin: 0;
+  width: 210px !important;
+}
+.skillmap-popup__inner {
+  display: block;
+  color: #1e293b;
+  text-decoration: none;
+}
+.skillmap-popup__inner img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+.skillmap-popup__op {
+  display: block;
+  padding: 8px 12px 0;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+.skillmap-popup__title {
+  display: block;
+  padding: 2px 12px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+.skillmap-popup__price {
+  display: block;
+  padding: 0 12px 10px;
+  font-weight: 700;
+  color: #0f172a;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { Terminal, Crosshair, Cpu, Filter, MapPin, Activity, ShieldAlert, ArrowUpRight } from 'lucide-react';
 import './ModelBrutalist.css';
 
@@ -94,13 +96,17 @@ export function ModelBrutalist() {
               </div>
 
               <div className="card-media-wrapper">
-                <img 
-                  src={prop.images[0]} 
-                  alt={prop.title} 
-                  className="brutalist-img" 
+                <FadeGallery
+                  images={prop.images}
+                  alt={prop.title}
+                  height="200px"
+                  className="brutalist-gallery"
+                  showDots={false}
                 />
                 <div className="scanline-overlay"></div>
-                <div className="coord-stamp">{prop.city.toUpperCase()} // LAT {prop.lat}</div>
+                <div className="coord-stamp">
+                  {prop.city.toUpperCase()} // LAT {prop.coordinates?.[0]?.toFixed(3)}
+                </div>
               </div>
 
               <div className="card-content-block">
@@ -150,7 +156,7 @@ export function ModelBrutalist() {
                 <h4>DATA DUMP: {activeProperty.title.toUpperCase()}</h4>
                 <p className="terminal-desc">{activeProperty.description}</p>
                 <div className="terminal-features">
-                  {activeProperty.features?.map((f, i) => (
+                  {activeProperty.amenities?.map((f, i) => (
                     <span key={i} className="terminal-tag">/// {f.toUpperCase()}</span>
                   ))}
                 </div>
@@ -172,6 +178,16 @@ export function ModelBrutalist() {
           </aside>
         )}
       </main>
+
+      <SkillMapSection
+        properties={filtered}
+        variant="blueprint"
+        accent="#E61919"
+        tone="dark"
+        label="[ GEO-TELEMETRY ]"
+        title="COORDENADAS ESTRUCTURALES // MAPA RADAR"
+        note="POSICIONAMIENTO DE ASSETS EN GRILLA GEOESPACIAL. CLICK EN MARCADOR PARA DATA DUMP."
+      />
 
       <footer className="brutalist-footer">
         <div className="foot-left">

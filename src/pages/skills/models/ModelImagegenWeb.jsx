@@ -1,6 +1,8 @@
 import React from 'react';
 import { mockProperties } from '../../../data/mockProperties';
 import { SkillFloatingBar } from '../SkillFloatingBar';
+import { FadeGallery } from '../../../components/FadeGallery';
+import { SkillMapSection } from '../../../components/SkillMapSection';
 import { Compass, ArrowRight, MapPin, Eye, CheckCircle, PhoneCall, Sparkles } from 'lucide-react';
 import './ModelImagegenWeb.css';
 
@@ -41,7 +43,7 @@ export function ModelImagegenWeb() {
         <div className="narrative-container split-narrative">
           <div className="narrative-media-col">
             <div className="panoramic-frame">
-              <img src={p2.images[0]} alt={p2.title} />
+              <FadeGallery images={p2.images} alt={p2.title} height="420px" />
               <div className="frame-tag">RESIDENCIA DE AUTOR // CORRIENTES</div>
             </div>
           </div>
@@ -123,14 +125,25 @@ export function ModelImagegenWeb() {
           </div>
           <div className="narrative-media-col">
             <div className="panoramic-frame">
-              <img src={p4.images[0]} alt={p4.title} />
+              <FadeGallery images={p4.images} alt={p4.title} height="420px" />
               <div className="frame-tag">SUELO &amp; DESARROLLOS // {p4.city.toUpperCase()}</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CHAPTER 5: FOOTER EPILOGUE */}
+      {/* CHAPTER 5: EL MAPA DEL RECORRIDO */}
+      <SkillMapSection
+        properties={mockProperties}
+        variant="dark"
+        accent="#c8a15a"
+        tone="dark"
+        label="Capítulo V · Cartografía"
+        title="Todo el recorrido, en un mapa"
+        note="Las propiedades de los cuatro capítulos, sobre el territorio de Corrientes y el Litoral."
+      />
+
+      {/* CHAPTER 6: FOOTER EPILOGUE */}
       <footer className="narrative-chapter chapter-epilogue">
         <div className="narrative-container epilogue-content">
           <h3>Inmobiliaria G • Luciano Gonzalez Jensen</h3>
